@@ -94,16 +94,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\mèo bị cọc.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\simple ninja game character_5066169.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\tải xuống.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\utehy.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-wide2.png" />

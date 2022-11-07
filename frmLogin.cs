@@ -23,10 +23,7 @@ namespace Student_Management
             f.ShowDialog();
         }
 
-        private void refesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmLogin_Load(sender, e);
-        }
+        
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
