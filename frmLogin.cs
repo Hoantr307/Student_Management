@@ -20,14 +20,22 @@ namespace Student_Management
         private void btnLogin_Click(object sender, EventArgs e)
         {
             frmMain f = new frmMain();
+            this.Hide();
             f.ShowDialog();
+            this.Show();
         }
 
-        
-
-        private void frmLogin_Load(object sender, EventArgs e)
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (MessageBox.Show("Bạn Có Muốn Thoát Ứng Dụng?","Thông Báo!",MessageBoxButtons.OKCancel,MessageBoxIcon.Question) != DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
+        }
 
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

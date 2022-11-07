@@ -16,5 +16,7 @@ namespace Student_Management
         {
             InitializeComponent();
         }
+
+        
     }
 }
