@@ -64,5 +64,13 @@ namespace Student_Management
         {
             Application.Exit();
         }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            frmCreateAccount f = new frmCreateAccount();
+            f.ShowDialog();
+        }
+
+        
     }
 }
