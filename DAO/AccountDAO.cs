@@ -28,7 +28,7 @@ namespace Student_Management.DAO
         public bool Login(string UserName, string Password, int type)
         {
             string CommandText = "USP_Login @userName ,  @passWord  , @accountType";
-            DataTable result = DataProvider.Instance.ExecuteQuery(CommandText, new object[] {UserName, Password, type});
+            DataTable result = DataProvider.Instance.ExecuteQuery(CommandText, new object[] {UserName.Trim(), Password.Trim(), type});
 
             return result.Rows.Count > 0;
         }

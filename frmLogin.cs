@@ -24,6 +24,7 @@ namespace Student_Management
         {
             return AccountDAO.Instance.Login(UserName, Password, type);
         }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string UserName = txtUsername.Text;
@@ -69,6 +70,20 @@ namespace Student_Management
             f.ShowDialog();
         }
 
-        
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Space)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Space)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

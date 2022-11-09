@@ -92,6 +92,7 @@
             this.txtPassword.Size = new System.Drawing.Size(350, 50);
             this.txtPassword.TabIndex = 11;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // txtUsername
             // 
@@ -117,6 +118,7 @@
             this.txtUsername.Size = new System.Drawing.Size(350, 50);
             this.txtUsername.TabIndex = 10;
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // guna2PictureBox2
@@ -154,6 +156,7 @@
             this.txtRePassword.TabIndex = 11;
             this.txtRePassword.UseSystemPasswordChar = true;
             this.txtRePassword.Enter += new System.EventHandler(this.txtRePassword_Enter);
+            this.txtRePassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRePassword_KeyPress);
             this.txtRePassword.Leave += new System.EventHandler(this.txtRePassword_Leave);
             // 
             // guna2HtmlLabel1

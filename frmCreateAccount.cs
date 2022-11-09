@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 
 namespace Student_Management
 {
@@ -28,10 +28,10 @@ namespace Student_Management
                 int type = cboPosition.Text == "Giáo Viên" ? 0 : 1;
                 if (txtUsername.Text != "" && txtDisplayName.Text != "" && txtPassword.Text != "" && txtRePassword.Text == txtPassword.Text && txtRePassword.Text != "" && cboPosition.Text != "")
                 {
-                    //USP_CreateAccount @userName = 'hoantr', @displayName = N'Hoàn Trần', @passWord = '1', @accountType = 0
+                    
                     string CommandText = "USP_CreateAccount @userName , @displayName , @passWord , @accountType";
 
-                    DataProvider.Instance.ExecuteQuery(CommandText, new object[] { txtUsername.Text, txtDisplayName.Text, txtPassword.Text, type });
+                    DataProvider.Instance.ExecuteQuery(CommandText, new object[] { txtUsername.Text.Trim(), txtDisplayName.Text.Trim(), txtPassword.Text.Trim(), type });
                     this.Close();
 
                 }
@@ -75,6 +75,7 @@ namespace Student_Management
             conn.Close();
             return dt.Rows.Count > 0;
         }
+
         private void txtUsername_Leave(object sender, EventArgs e)
         {
             if (Exist(txtUsername.Text))
@@ -82,11 +83,39 @@ namespace Student_Management
                 lbExist.Visible = true;
             }
             else lbExist.Visible = false;
+
         }
 
         private void txtUsername_Enter(object sender, EventArgs e)
         {
             lbExist.Visible = false;
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Space )
+            {
+                e.Handled = true;
+
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Space)
+            {
+                e.Handled = true;
+
+            }
+        }
+
+        private void txtRePassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Keys)e.KeyChar == Keys.Space)
+            {
+                e.Handled = true;
+
+            }
         }
     }
 }
