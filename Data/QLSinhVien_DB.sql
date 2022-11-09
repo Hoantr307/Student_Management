@@ -1,4 +1,4 @@
-create database QLSinhVien
+﻿create database QLSinhVien
 go
 use QLSinhVien
 go
@@ -11,10 +11,61 @@ create table Account
 	AccountType bit -- 0 : giao vien , 1: sinh vien
 )
 
-insert Account
-values('hoafn3007', N'Ho�n', '1', 1)
+go
+create table Student
+(
+	StudentID int primary key,
+	StudentName Nvarchar(100),
+	Birthday date,
+	Gender nchar(3) constraint Ck_s_Gd check(Gender in (N'Nam' , N'Nữ')),
+	Address nvarchar(100),
+	ClassID int
+)
+go
 
-select * from Account 
-where UserName = 'hoafn3007'and PassWord = '1' and AccountType = 0
+create table Class
+(
+	ClassID int primary key,
+	DepartmentID varchar(10) foreign key references Department(DepartmentID) on delete cascade,
+	ClassName Nvarchar(50)
 
+)
+go
 
+create table Department
+(
+	DepartmentID varchar(10) primary key,
+	DepartmentName Nvarchar(50)
+)
+go
+create table Teacher
+(
+	TeacherID int primary key,
+	TeacherName Nvarchar(50),
+	Gender nchar(3) constraint Ck_T_Gd check(Gender in (N'Nam' , N'Nữ')),
+	Phone varchar(10),
+	Email varchar(50) constraint ck_tc_E check(Email like '%@%'),
+	TeacherType nvarchar(50)
+)
+go
+
+create table Subject
+(
+	SubjectID varchar(10) primary key,
+	SubjectName Nvarchar(100),
+	TeacherID int foreign key references Teacher(TeacherID) on delete cascade,
+	Semester bit,
+	DepartmentID varchar(10) foreign key references Department(DepartmentID) on delete cascade
+)
+go
+
+create table Result
+(
+	StudentID int foreign key references Student(StudentID) on delete cascade,
+	StudentName Nvarchar(100) ,
+	ClassID int ,
+	SubjectID varchar(10) 
+
+	constraint pk_st_cl_sj primary key(StudentID, SubjectID)
+)
+alter table Result add constraint FK_Rs_sj foreign key (SubjectID) references Subject(SubjectID)
