@@ -69,3 +69,16 @@ create table Result
 	constraint pk_st_cl_sj primary key(StudentID, SubjectID)
 )
 alter table Result add constraint FK_Rs_sj foreign key (SubjectID) references Subject(SubjectID)
+go
+
+
+--PROCEDURE
+create proc USP_Login 
+@userName varchar(50) , @passWord varchar(50) , @accountType bit
+as
+begin
+	select * from Account where UserName = @userName and PassWord = @passWord and AccountType = @accountType
+end
+go
+
+exec USP_Login @userName = 'hoafn3007',  @passWord = '1' , @accountType = 1
