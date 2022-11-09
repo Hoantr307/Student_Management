@@ -75,8 +75,7 @@ go
 
 
 
-
-
+go
 --PROCEDURE
 create proc USP_Login 
 @userName varchar(50) , @passWord varchar(50) , @accountType bit
@@ -88,6 +87,7 @@ go
 
 exec USP_Login @userName = 'hoafn3007',  @passWord = '1' , @accountType = 1
 go
+
 --
 create proc USP_CreateAccount
 @userName varchar(50) , @displayName Nvarchar(100) , @passWord varchar(50) , @accountType bit
@@ -96,4 +96,3 @@ begin
 	insert Account values(@userName, @displayName, @passWord, @accountType)
 end
 go
-exec USP_CreateAccount @userName = 'hoan', @displayName = N'Hoàn Trần', @passWord = '1', @accountType = 0
