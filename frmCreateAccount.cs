@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Student_Management.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,19 +25,15 @@ namespace Student_Management
         {
             try
             {
-
                 int type = cboPosition.Text == "Giáo Viên" ? 0 : 1;
-                if (txtUsername.Text != "" && txtDisplayName.Text !="" && txtPassword.Text != "" && txtRePassword.Text == txtPassword.Text && txtRePassword.Text != "")
+                if (txtUsername.Text != "" && txtDisplayName.Text != "" && txtPassword.Text != "" && txtRePassword.Text == txtPassword.Text && txtRePassword.Text != "" && cboPosition.Text != "")
                 {
-                    conn.Open();
-                    string CommandText = "Insert Account values('"+txtUsername.Text+"', N'"+txtDisplayName.Text+"', '"+txtPassword.Text+"', "+type+")";
-                    SqlCommand cmd = new SqlCommand(CommandText, conn);
+                    //USP_CreateAccount @userName = 'hoantr', @displayName = N'Hoàn Trần', @passWord = '1', @accountType = 0
+                    string CommandText = "USP_CreateAccount @userName , @displayName , @passWord , @accountType";
 
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    conn.Close();
+                    DataProvider.Instance.ExecuteQuery(CommandText, new object[] { txtUsername.Text, txtDisplayName.Text, txtPassword.Text, type });
                     this.Close();
+
                 }
                 else
                 {

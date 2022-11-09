@@ -15,7 +15,6 @@ namespace Student_Management
 
     public partial class frmLogin : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=HOAN;Initial Catalog=QLSinhVien;Integrated Security=True;TrustServerCertificate=True");
         public frmLogin()
         {
             InitializeComponent();
