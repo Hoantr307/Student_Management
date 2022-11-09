@@ -110,5 +110,8 @@
   <ItemGroup>
     <None Include="Resources\logo-wide2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

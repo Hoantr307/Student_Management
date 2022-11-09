@@ -25,8 +25,9 @@ namespace Student_Management.DAO
             private set => instance = value; 
         }
         private DataProvider() { }
+
         string ConnectionStr = @"Data Source=HOAN; Initial Catalog=QLSinhVien; Integrated Security=True; TrustServerCertificate=True";
-        /*public DataTable ExecuteQuery(string Query, object[] parameter = null)
+        public DataTable ExecuteQuery(string Query, object[] parameter = null)
         {
             DataTable dt = new DataTable();
             using (SqlConnection conn = new SqlConnection(ConnectionStr))
@@ -39,10 +40,20 @@ namespace Student_Management.DAO
                     int i = 0;
                     foreach (string str in listPara)
                     {
-                        if
+                        if (str.Contains('@'))
+                        {
+                            cmd.Parameters.AddWithValue(str, parameter[i]);
+                            i++;
+                        }
                     }
                 }
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                conn.Close();
+                da.Dispose();
             }
-        }*/
+            return dt;
+        }
+
     }
 }

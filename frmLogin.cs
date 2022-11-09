@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Student_Management.DAO;
 
 namespace Student_Management
 {
@@ -22,22 +23,20 @@ namespace Student_Management
 
         bool Login(string UserName, string Password, int type)
         {
-            conn.Open();
-            string CommandText = "select * from Account where UserName = '"+ UserName + "'and PassWord = '"+Password+ "'and AccountType = "+ type;
-            SqlCommand cmd = new SqlCommand(CommandText, conn);
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            conn.Close();
-            return dt.Rows.Count > 0;
+            return AccountDAO.Instance.Login(UserName, Password, type);
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string UserName = txtUsername.Text;
             string Password = txtPassword.Text;
             int type = cboPosition.Text == "Giáo Viên" ? 0 : 1;
-            
+
+            if (cboPosition.Text == "")
+            {
+                MessageBox.Show("Bạn Chưa Chọn Loại Tài Khoản! Yêu Cầu Nhập Lại!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
             if (Login(UserName, Password, type))
             {
                 frmMain f = new frmMain();
@@ -47,9 +46,9 @@ namespace Student_Management
             }
             else
             {
-                MessageBox.Show("Bạn Nhập Sai Mật Khẩu! Yêu Cầu Nhập Lại!");
+                MessageBox.Show("Bạn Nhập Sai Tài Khoản, Mật Khẩu Hoặc Sai Loại Tài Khoản! Yêu Cầu Nhập Lại!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+                
         }
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
