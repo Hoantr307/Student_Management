@@ -65,14 +65,9 @@ namespace Student_Management
 
         bool Exist(string UserName)
         {
-            conn.Open();
+            
             string CommandText = "select * from Account where UserName = '" + UserName + "'";
-            SqlCommand cmd = new SqlCommand(CommandText, conn);
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            conn.Close();
+            DataTable dt = DataProvider.Instance.ExecuteQuery(CommandText);
             return dt.Rows.Count > 0;
         }
 

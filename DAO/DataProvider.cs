@@ -26,7 +26,7 @@ namespace Student_Management.DAO
         }
         private DataProvider() { }
 
-        string ConnectionStr = @"Data Source=DESKTOP-1OFH7OO\MYNAM_SERVER; Initial Catalog=QLSinhVien; Integrated Security=True; TrustServerCertificate=True";
+        string ConnectionStr = @"Data Source=HOAN; Initial Catalog=QLSinhVien; Integrated Security=True; TrustServerCertificate=True";
         public DataTable ExecuteQuery(string Query, object[] parameter = null)
         {
             DataTable dt = new DataTable();
