@@ -45,7 +45,6 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,30 +52,13 @@
             // 
             this.guna2PictureBox3.Image = global::Student_Management.Properties.Resources.logo_wide2;
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(2, 2);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(3, 2);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(34, 37);
+            this.guna2PictureBox3.Size = new System.Drawing.Size(45, 46);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 1;
             this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.BorderRadius = 5;
-            this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(145)))), ((int)(((byte)(118)))));
-            this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ControlBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1238, 3);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(66, 56);
-            this.guna2ControlBox1.TabIndex = 2;
-            this.guna2ControlBox1.UseTransparentBackground = true;
             // 
             // btnExit
             // 
@@ -88,10 +70,10 @@
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnExit.IconColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(980, 2);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Location = new System.Drawing.Point(1331, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(50, 46);
+            this.btnExit.Size = new System.Drawing.Size(67, 57);
             this.btnExit.TabIndex = 3;
             this.btnExit.UseTransparentBackground = true;
             // 
@@ -101,18 +83,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.Controls.Add(this.btnExit);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox3);
-            this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
-            this.guna2Panel1.Location = new System.Drawing.Point(12, 12);
+            this.guna2Panel1.Location = new System.Drawing.Point(16, 15);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1032, 50);
+            this.guna2Panel1.Size = new System.Drawing.Size(1400, 62);
             this.guna2Panel1.TabIndex = 4;
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Location = new System.Drawing.Point(76, 224);
+            this.guna2Panel2.Location = new System.Drawing.Point(76, 173);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(695, 112);
+            this.guna2Panel2.Size = new System.Drawing.Size(927, 138);
             this.guna2Panel2.TabIndex = 5;
+            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // menuStrip1
             // 
@@ -184,37 +168,27 @@
             // 
             // toolStrip1
             // 
-            this.btndangxuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btndangxuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btndangxuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btndangxuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btndangxuat.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btndangxuat.ForeColor = System.Drawing.SystemColors.Window;
-            this.btndangxuat.Location = new System.Drawing.Point(1319, 79);
-            this.btndangxuat.Name = "btndangxuat";
-            this.btndangxuat.Size = new System.Drawing.Size(66, 45);
-            this.btndangxuat.TabIndex = 6;
-            this.btndangxuat.Text = "Đăng Xuất";
-            this.btndangxuat.Click += new System.EventHandler(this.btndangxuat_Click);
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(100, 25);
+            this.toolStrip1.TabIndex = 0;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 700);
-            this.Controls.Add(this.btndangxuat);
+            this.ClientSize = new System.Drawing.Size(1867, 862);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmMain";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
