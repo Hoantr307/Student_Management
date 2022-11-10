@@ -113,5 +113,35 @@
   <ItemGroup>
     <Folder Include="DTO\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\216242_home_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62017743-hoạt-hình-dễ-thương-vẽ-tay-du-lịch-kiểu-liền-mạch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-hoa-tiet-trong-dong_095237726.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7832374955f73fc1d109a4869320f0ba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9023992_student_fill_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4763274_instructor_professor_teacher_teaching_tutor_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8468585_background_school_chalkboard_billboard_chalk_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8665051_book_journal_whills_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1519780_colorful_document_office_paper_school_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

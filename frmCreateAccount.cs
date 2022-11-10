@@ -15,7 +15,7 @@ namespace Student_Management
 {
     public partial class frmCreateAccount : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=HOAN;Initial Catalog=QLSinhVien;Integrated Security=True;TrustServerCertificate=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-1OFH7OO\MYNAM_SERVER;Initial Catalog=QLSinhVien;Integrated Security=True;TrustServerCertificate=True");
         public frmCreateAccount()
         {
             InitializeComponent();
@@ -116,6 +116,11 @@ namespace Student_Management
                 e.Handled = true;
 
             }
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
