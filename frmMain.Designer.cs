@@ -120,7 +120,7 @@
             this.label1.Location = new System.Drawing.Point(75, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(769, 31);
+            this.label1.Size = new System.Drawing.Size(567, 31);
             this.label1.TabIndex = 4;
             this.label1.Text = "QUẢN LÝ KẾT QUẢ HỌC TẬP VÀ RÈN LUYỆN SINH VIÊN KHOA CNTT";
             // 
