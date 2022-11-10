@@ -46,9 +46,10 @@
             // 
             this.guna2PictureBox3.Image = global::Student_Management.Properties.Resources.logo_wide2;
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(3, 3);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(2, 2);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(45, 45);
+            this.guna2PictureBox3.Size = new System.Drawing.Size(34, 37);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 1;
             this.guna2PictureBox3.TabStop = false;
@@ -64,9 +65,10 @@
             this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1238, 3);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(928, 2);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(66, 56);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(50, 46);
             this.guna2ControlBox1.TabIndex = 2;
             this.guna2ControlBox1.UseTransparentBackground = true;
             // 
@@ -80,9 +82,10 @@
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnExit.IconColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(1307, 3);
+            this.btnExit.Location = new System.Drawing.Point(980, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(66, 56);
+            this.btnExit.Size = new System.Drawing.Size(50, 46);
             this.btnExit.TabIndex = 3;
             this.btnExit.UseTransparentBackground = true;
             // 
@@ -91,16 +94,18 @@
             this.guna2Panel1.Controls.Add(this.btnExit);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox3);
             this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
-            this.guna2Panel1.Location = new System.Drawing.Point(12, 12);
+            this.guna2Panel1.Location = new System.Drawing.Point(9, 10);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1376, 61);
+            this.guna2Panel1.Size = new System.Drawing.Size(1032, 50);
             this.guna2Panel1.TabIndex = 4;
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Location = new System.Drawing.Point(76, 224);
+            this.guna2Panel2.Location = new System.Drawing.Point(9, 73);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(695, 112);
+            this.guna2Panel2.Size = new System.Drawing.Size(521, 91);
             this.guna2Panel2.TabIndex = 5;
             // 
             // guna2ShadowForm1
@@ -133,22 +138,24 @@
             this.btndangxuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btndangxuat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btndangxuat.ForeColor = System.Drawing.SystemColors.Window;
-            this.btndangxuat.Location = new System.Drawing.Point(1319, 79);
+            this.btndangxuat.Location = new System.Drawing.Point(989, 64);
+            this.btndangxuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btndangxuat.Name = "btndangxuat";
-            this.btndangxuat.Size = new System.Drawing.Size(66, 45);
+            this.btndangxuat.Size = new System.Drawing.Size(50, 37);
             this.btndangxuat.TabIndex = 6;
             this.btndangxuat.Text = "Đăng Xuất";
             this.btndangxuat.Click += new System.EventHandler(this.btndangxuat_Click);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 700);
+            this.ClientSize = new System.Drawing.Size(1050, 569);
             this.Controls.Add(this.btndangxuat);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmMain";
