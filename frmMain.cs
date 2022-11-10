@@ -33,11 +33,16 @@ namespace Student_Management
 
         }
 
-        private void btndangxuat_Click(object sender, EventArgs e)
+        
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Exit(this, new EventArgs());
         }
 
-        
+        private void btndangxuat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
