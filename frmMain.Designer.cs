@@ -98,9 +98,9 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Location = new System.Drawing.Point(12, 79);
+            this.guna2Panel2.Location = new System.Drawing.Point(76, 224);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(299, 609);
+            this.guna2Panel2.Size = new System.Drawing.Size(695, 112);
             this.guna2Panel2.TabIndex = 5;
             // 
             // guna2ShadowForm1
@@ -133,9 +133,9 @@
             this.btndangxuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btndangxuat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btndangxuat.ForeColor = System.Drawing.SystemColors.Window;
-            this.btndangxuat.Location = new System.Drawing.Point(1187, 623);
+            this.btndangxuat.Location = new System.Drawing.Point(1319, 79);
             this.btndangxuat.Name = "btndangxuat";
-            this.btndangxuat.Size = new System.Drawing.Size(180, 45);
+            this.btndangxuat.Size = new System.Drawing.Size(66, 45);
             this.btndangxuat.TabIndex = 6;
             this.btndangxuat.Text = "Đăng Xuất";
             this.btndangxuat.Click += new System.EventHandler(this.btndangxuat_Click);

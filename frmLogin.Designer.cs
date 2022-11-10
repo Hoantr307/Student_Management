@@ -100,7 +100,7 @@
             this.cboPosition.Location = new System.Drawing.Point(235, 277);
             this.cboPosition.Name = "cboPosition";
             this.cboPosition.Size = new System.Drawing.Size(141, 36);
-            this.cboPosition.TabIndex = 8;
+            this.cboPosition.TabIndex = 2;
             // 
             // linkLabel1
             // 
@@ -110,7 +110,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(32, 525);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(134, 20);
-            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Quên Mật Khẩu?";
             // 
@@ -130,7 +130,7 @@
             this.btnCreate.Location = new System.Drawing.Point(37, 415);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(329, 50);
-            this.btnCreate.TabIndex = 6;
+            this.btnCreate.TabIndex = 4;
             this.btnCreate.Text = "Tạo Tài Khoản";
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
@@ -147,7 +147,7 @@
             this.btnLogin.Location = new System.Drawing.Point(37, 359);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(329, 50);
-            this.btnLogin.TabIndex = 6;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng Nhập";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -184,7 +184,7 @@
             this.tswRemember.Location = new System.Drawing.Point(32, 283);
             this.tswRemember.Name = "tswRemember";
             this.tswRemember.Size = new System.Drawing.Size(50, 26);
-            this.tswRemember.TabIndex = 3;
+            this.tswRemember.TabIndex = 5;
             this.tswRemember.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.tswRemember.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.tswRemember.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
@@ -211,7 +211,7 @@
             this.txtPassword.PlaceholderText = "Mật Khẩu";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(350, 50);
-            this.txtPassword.TabIndex = 2;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
@@ -237,7 +237,7 @@
             this.txtUsername.PlaceholderText = "Tên Tài Khoản";
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(350, 50);
-            this.txtUsername.TabIndex = 1;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // guna2PictureBox3

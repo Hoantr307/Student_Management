@@ -66,7 +66,7 @@
             this.cboPosition.Location = new System.Drawing.Point(419, 369);
             this.cboPosition.Name = "cboPosition";
             this.cboPosition.Size = new System.Drawing.Size(192, 36);
-            this.cboPosition.TabIndex = 14;
+            this.cboPosition.TabIndex = 4;
             this.cboPosition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPassword
@@ -90,7 +90,7 @@
             this.txtPassword.PlaceholderText = "Mật Khẩu";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(350, 50);
-            this.txtPassword.TabIndex = 11;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
@@ -116,7 +116,7 @@
             this.txtUsername.PlaceholderText = "Tên Tài Khoản";
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(350, 50);
-            this.txtUsername.TabIndex = 10;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
@@ -153,7 +153,7 @@
             this.txtRePassword.PlaceholderText = "Nhập Lại Mật Khẩu";
             this.txtRePassword.SelectedText = "";
             this.txtRePassword.Size = new System.Drawing.Size(350, 50);
-            this.txtRePassword.TabIndex = 11;
+            this.txtRePassword.TabIndex = 3;
             this.txtRePassword.UseSystemPasswordChar = true;
             this.txtRePassword.Enter += new System.EventHandler(this.txtRePassword_Enter);
             this.txtRePassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRePassword_KeyPress);
@@ -184,7 +184,7 @@
             this.btnCreateAcc.Location = new System.Drawing.Point(263, 424);
             this.btnCreateAcc.Name = "btnCreateAcc";
             this.btnCreateAcc.Size = new System.Drawing.Size(350, 50);
-            this.btnCreateAcc.TabIndex = 17;
+            this.btnCreateAcc.TabIndex = 5;
             this.btnCreateAcc.Text = "Tạo Tài Khoản";
             this.btnCreateAcc.Click += new System.EventHandler(this.btnCreateAcc_Click);
             // 
@@ -220,7 +220,7 @@
             this.txtDisplayName.PlaceholderText = "Tên Hiển Thị";
             this.txtDisplayName.SelectedText = "";
             this.txtDisplayName.Size = new System.Drawing.Size(350, 50);
-            this.txtDisplayName.TabIndex = 10;
+            this.txtDisplayName.TabIndex = 1;
             // 
             // lbnotify
             // 
