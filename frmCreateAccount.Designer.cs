@@ -63,9 +63,10 @@
             this.cboPosition.Items.AddRange(new object[] {
             "Giáo Viên",
             "Sinh Viên"});
-            this.cboPosition.Location = new System.Drawing.Point(419, 369);
+            this.cboPosition.Location = new System.Drawing.Point(314, 300);
+            this.cboPosition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboPosition.Name = "cboPosition";
-            this.cboPosition.Size = new System.Drawing.Size(192, 36);
+            this.cboPosition.Size = new System.Drawing.Size(145, 36);
             this.cboPosition.TabIndex = 4;
             this.cboPosition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -83,13 +84,12 @@
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(261, 225);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Location = new System.Drawing.Point(196, 183);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.PlaceholderText = "Mật Khẩu";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(350, 50);
+            this.txtPassword.Size = new System.Drawing.Size(262, 41);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
@@ -108,14 +108,13 @@
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.txtUsername.Location = new System.Drawing.Point(261, 86);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Location = new System.Drawing.Point(196, 70);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(210)))));
             this.txtUsername.PlaceholderText = "Tên Tài Khoản";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(350, 50);
+            this.txtUsername.Size = new System.Drawing.Size(262, 41);
             this.txtUsername.TabIndex = 0;
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
@@ -125,9 +124,10 @@
             // 
             this.guna2PictureBox2.Image = global::Student_Management.Properties.Resources.logo_wide2;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(2, 2);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(38, 38);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(28, 31);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 9;
             this.guna2PictureBox2.TabStop = false;
@@ -146,13 +146,12 @@
             this.txtRePassword.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtRePassword.ForeColor = System.Drawing.Color.Black;
             this.txtRePassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRePassword.Location = new System.Drawing.Point(261, 289);
-            this.txtRePassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRePassword.Location = new System.Drawing.Point(196, 235);
             this.txtRePassword.Name = "txtRePassword";
             this.txtRePassword.PasswordChar = '●';
             this.txtRePassword.PlaceholderText = "Nhập Lại Mật Khẩu";
             this.txtRePassword.SelectedText = "";
-            this.txtRePassword.Size = new System.Drawing.Size(350, 50);
+            this.txtRePassword.Size = new System.Drawing.Size(262, 41);
             this.txtRePassword.TabIndex = 3;
             this.txtRePassword.UseSystemPasswordChar = true;
             this.txtRePassword.Enter += new System.EventHandler(this.txtRePassword_Enter);
@@ -165,9 +164,10 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(261, 369);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(196, 300);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(152, 30);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(114, 24);
             this.guna2HtmlLabel1.TabIndex = 15;
             this.guna2HtmlLabel1.Text = "Loại Tài Khoản:";
             // 
@@ -181,9 +181,10 @@
             this.btnCreateAcc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCreateAcc.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnCreateAcc.ForeColor = System.Drawing.Color.White;
-            this.btnCreateAcc.Location = new System.Drawing.Point(263, 424);
+            this.btnCreateAcc.Location = new System.Drawing.Point(197, 344);
+            this.btnCreateAcc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCreateAcc.Name = "btnCreateAcc";
-            this.btnCreateAcc.Size = new System.Drawing.Size(350, 50);
+            this.btnCreateAcc.Size = new System.Drawing.Size(262, 41);
             this.btnCreateAcc.TabIndex = 5;
             this.btnCreateAcc.Text = "Tạo Tài Khoản";
             this.btnCreateAcc.Click += new System.EventHandler(this.btnCreateAcc_Click);
@@ -193,9 +194,10 @@
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(797, 3);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(598, 2);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox1.TabIndex = 18;
             // 
             // txtDisplayName
@@ -212,14 +214,13 @@
             this.txtDisplayName.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtDisplayName.ForeColor = System.Drawing.Color.Black;
             this.txtDisplayName.HoverState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.txtDisplayName.Location = new System.Drawing.Point(261, 160);
-            this.txtDisplayName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDisplayName.Location = new System.Drawing.Point(196, 130);
             this.txtDisplayName.Name = "txtDisplayName";
             this.txtDisplayName.PasswordChar = '\0';
             this.txtDisplayName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(210)))));
             this.txtDisplayName.PlaceholderText = "Tên Hiển Thị";
             this.txtDisplayName.SelectedText = "";
-            this.txtDisplayName.Size = new System.Drawing.Size(350, 50);
+            this.txtDisplayName.Size = new System.Drawing.Size(262, 41);
             this.txtDisplayName.TabIndex = 1;
             // 
             // lbnotify
@@ -227,9 +228,10 @@
             this.lbnotify.AutoSize = true;
             this.lbnotify.BackColor = System.Drawing.Color.Transparent;
             this.lbnotify.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lbnotify.Location = new System.Drawing.Point(265, 343);
+            this.lbnotify.Location = new System.Drawing.Point(199, 279);
+            this.lbnotify.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbnotify.Name = "lbnotify";
-            this.lbnotify.Size = new System.Drawing.Size(227, 16);
+            this.lbnotify.Size = new System.Drawing.Size(216, 15);
             this.lbnotify.TabIndex = 19;
             this.lbnotify.Text = "Bạn Nhập Lại Không Đúng Mật Khẩu !";
             this.lbnotify.Visible = false;
@@ -239,9 +241,10 @@
             this.lbExist.AutoSize = true;
             this.lbExist.BackColor = System.Drawing.Color.Transparent;
             this.lbExist.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lbExist.Location = new System.Drawing.Point(265, 140);
+            this.lbExist.Location = new System.Drawing.Point(199, 114);
+            this.lbExist.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbExist.Name = "lbExist";
-            this.lbExist.Size = new System.Drawing.Size(168, 16);
+            this.lbExist.Size = new System.Drawing.Size(153, 15);
             this.lbExist.TabIndex = 19;
             this.lbExist.Text = "Tên Tài Khoản Đã Tồn Tại!";
             this.lbExist.Visible = false;
@@ -250,10 +253,12 @@
             // 
             this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
-            this.guna2Panel1.Location = new System.Drawing.Point(12, 12);
+            this.guna2Panel1.Location = new System.Drawing.Point(9, 10);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(845, 44);
+            this.guna2Panel1.Size = new System.Drawing.Size(634, 36);
             this.guna2Panel1.TabIndex = 20;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // guna2DragControl1
             // 
@@ -278,9 +283,9 @@
             // frmCreateAccount
             // 
             this.AcceptButton = this.btnCreateAcc;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 531);
+            this.ClientSize = new System.Drawing.Size(652, 431);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.lbExist);
             this.Controls.Add(this.lbnotify);
@@ -292,6 +297,7 @@
             this.Controls.Add(this.txtDisplayName);
             this.Controls.Add(this.txtUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCreateAccount";

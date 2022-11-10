@@ -40,5 +40,15 @@ namespace Student_Management
         {
             Exit(this, new EventArgs());
         }
+
+        private void btndangxuat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
