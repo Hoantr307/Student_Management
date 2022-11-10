@@ -133,7 +133,7 @@
             this.btndangxuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btndangxuat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btndangxuat.ForeColor = System.Drawing.SystemColors.Window;
-            this.btndangxuat.Location = new System.Drawing.Point(1180, 616);
+            this.btndangxuat.Location = new System.Drawing.Point(1187, 623);
             this.btndangxuat.Name = "btndangxuat";
             this.btndangxuat.Size = new System.Drawing.Size(180, 45);
             this.btndangxuat.TabIndex = 6;
