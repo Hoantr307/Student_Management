@@ -39,10 +39,11 @@ namespace Student_Management
             }
             if (Login(UserName, Password, type))
             {
+
                 frmMain f = new frmMain();
+                f.Show();
                 this.Hide();
-                f.ShowDialog();
-                this.Show();
+                f.Exit += F_Exit;
             }
             else
             {
@@ -51,12 +52,11 @@ namespace Student_Management
                 
         }
 
-        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        private void F_Exit(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn Có Muốn Thoát Ứng Dụng?","Thông Báo!",MessageBoxButtons.OKCancel,MessageBoxIcon.Question) != DialogResult.OK)
-            {
-                e.Cancel = true;
-            }
+            (sender as frmMain).isExit = false;
+            (sender as frmMain).Close();
+            this.Show();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

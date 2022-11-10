@@ -75,7 +75,13 @@ go
 
 
 
-go
+
+
+
+
+
+
+
 --PROCEDURE
 create proc USP_Login 
 @userName varchar(50) , @passWord varchar(50) , @accountType bit

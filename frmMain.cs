@@ -17,6 +17,27 @@ namespace Student_Management
             InitializeComponent();
         }
 
+
+
+
+
+        public bool isExit = true;
+
+        public event EventHandler Exit;
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (isExit)
+            {
+                Application.Exit();
+            }
+
+        }
+
+        private void btndangxuat_Click(object sender, EventArgs e)
+        {
+            Exit(this, new EventArgs());
+        }
+
         
     }
 }

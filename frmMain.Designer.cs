@@ -37,6 +37,7 @@
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.btndangxuat = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -124,17 +125,34 @@
             this.guna2DragControl1.TargetControl = this.guna2Panel1;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
+            // btndangxuat
+            // 
+            this.btndangxuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btndangxuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btndangxuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btndangxuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btndangxuat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btndangxuat.ForeColor = System.Drawing.SystemColors.Window;
+            this.btndangxuat.Location = new System.Drawing.Point(1180, 616);
+            this.btndangxuat.Name = "btndangxuat";
+            this.btndangxuat.Size = new System.Drawing.Size(180, 45);
+            this.btndangxuat.TabIndex = 6;
+            this.btndangxuat.Text = "Đăng Xuất";
+            this.btndangxuat.Click += new System.EventHandler(this.btndangxuat_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1400, 700);
+            this.Controls.Add(this.btndangxuat);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmMain";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -150,5 +168,6 @@
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2Button btndangxuat;
     }
 }
