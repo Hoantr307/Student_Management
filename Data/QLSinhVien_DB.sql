@@ -10,8 +10,8 @@ create table Account
 	PassWord varchar(50) not null,
 	AccountType bit -- 0 : giao vien , 1: sinh vien
 )
-
 go
+
 create table Student
 (
 	StudentID int primary key,
@@ -19,25 +19,20 @@ create table Student
 	Birthday date,
 	Gender nchar(3) constraint Ck_s_Gd check(Gender in (N'Nam' , N'Nữ')),
 	Address nvarchar(100),
-	ClassID int
+	ClassID int 
 )
 go
+alter table Student 
+add constraint FK_S_ClassID foreign key (ClassID) references Class(ClassID)
+
 
 create table Class
 (
 	ClassID int primary key,
-	DepartmentID varchar(10) foreign key references Department(DepartmentID) on delete cascade,
 	ClassName Nvarchar(50)
-
 )
 go
 
-create table Department
-(
-	DepartmentID varchar(10) primary key,
-	DepartmentName Nvarchar(50)
-)
-go
 create table Teacher
 (
 	TeacherID int primary key,
@@ -53,9 +48,9 @@ create table Subject
 (
 	SubjectID varchar(10) primary key,
 	SubjectName Nvarchar(100),
+	LessonNumber int,
 	TeacherID int foreign key references Teacher(TeacherID) on delete cascade,
-	Semester bit,
-	DepartmentID varchar(10) foreign key references Department(DepartmentID) on delete cascade
+	Semester bit
 )
 go
 
@@ -64,14 +59,20 @@ create table Result
 	StudentID int foreign key references Student(StudentID) on delete cascade,
 	StudentName Nvarchar(100) ,
 	ClassID int ,
-	SubjectID varchar(10) 
+	SubjectID varchar(10),
+	ScoreAvg float,
+	ScoreElement float,
+	ScorePractice float,
+	ScoreFinal float,
+	Conduct nvarchar(50),
+	Description Nvarchar(100)
 
 	constraint pk_st_cl_sj primary key(StudentID, SubjectID)
 )
 alter table Result add constraint FK_Rs_sj foreign key (SubjectID) references Subject(SubjectID)
 go
-
-
+alter table Result add constraint FK_Rs_Class foreign key (ClassID) references Class(ClassID)
+go
 
 
 
@@ -91,8 +92,6 @@ begin
 end
 go
 
-exec USP_Login @userName = 'hoafn3007',  @passWord = '1' , @accountType = 1
-go
 
 --
 create proc USP_CreateAccount

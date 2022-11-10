@@ -21,6 +21,9 @@ namespace Student_Management
 
 
 
+
+
+
         public bool isExit = true;
 
         public event EventHandler Exit;
@@ -33,21 +36,9 @@ namespace Student_Management
 
         }
 
-        
-
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        private void đăngXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Exit(this, new EventArgs());
-        }
-
-        private void btndangxuat_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
