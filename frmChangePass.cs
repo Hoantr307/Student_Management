@@ -18,17 +18,14 @@ namespace Student_Management
             InitializeComponent();
         }
 
-        bool Exist(string UserName , string Password)
+        bool Exist(string Password)
         {
-
-            string CommandText = "select * from Account where UserName = '" + UserName + "' and Password = '"+Password+"'";
-            DataTable dt = DataProvider.Instance.ExecuteQuery(CommandText);
-            return dt.Rows.Count > 0;
+            return txtPassword.Text == Password;
         }
 
         private void txtPassword_Leave(object sender, EventArgs e)
         {
-            if (!Exist(frmLogin.userName, txtPassword.Text))
+            if (!Exist(frmLogin.passWord))
             {
                 lbExist.Visible = true;
             }

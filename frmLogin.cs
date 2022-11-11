@@ -20,6 +20,8 @@ namespace Student_Management
             InitializeComponent();
         }
         public static string userName;
+        public static string passWord;
+        public static int type;
         bool Login(string UserName, string Password, int type)
         {
             return AccountDAO.Instance.Login(UserName, Password, type);
@@ -29,7 +31,7 @@ namespace Student_Management
         {
             string UserName = txtUsername.Text;
             string Password = txtPassword.Text;
-            int type = cboPosition.Text == "Giáo Viên" ? 0 : 1;
+            int Type = cboPosition.Text == "Giáo Viên" ? 0 : 1;
 
             if (cboPosition.Text == "")
             {
@@ -37,9 +39,12 @@ namespace Student_Management
                 return;
 
             }
-            if (Login(UserName, Password, type))
+            if (Login(UserName, Password, Type))
             {
                 userName = UserName;
+                passWord = Password;
+                type = Type;
+
                 frmMain f = new frmMain();
                 f.Show();
                 this.Hide();
