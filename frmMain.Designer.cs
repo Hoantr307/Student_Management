@@ -44,7 +44,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.tsbTeacher = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
@@ -110,7 +110,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1568, 64);
+            this.guna2Panel1.Size = new System.Drawing.Size(1500, 64);
             this.guna2Panel1.TabIndex = 4;
             // 
             // label1
@@ -135,7 +135,7 @@
             this.guna2ControlBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1391, 10);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1318, 10);
             this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(55, 46);
@@ -153,7 +153,7 @@
             this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1451, 10);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1378, 10);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(55, 46);
@@ -170,7 +170,7 @@
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnExit.IconColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(1511, 10);
+            this.btnExit.Location = new System.Drawing.Point(1438, 10);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(55, 46);
@@ -194,10 +194,10 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 844);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 774);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1572, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(1500, 26);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -220,7 +220,7 @@
             this.guna2Panel2.Location = new System.Drawing.Point(0, 62);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1572, 773);
+            this.guna2Panel2.Size = new System.Drawing.Size(1500, 703);
             this.guna2Panel2.TabIndex = 5;
             // 
             // toolStrip1
@@ -230,13 +230,13 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
-            this.toolStripButton3,
+            this.tsbTeacher,
             this.toolStripButton4,
             this.toolStripButton5,
             this.toolStripButton6});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1572, 60);
+            this.toolStrip1.Size = new System.Drawing.Size(1500, 60);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -259,14 +259,15 @@
             this.toolStripButton2.Size = new System.Drawing.Size(125, 57);
             this.toolStripButton2.Text = "SINH VIÊN";
             // 
-            // toolStripButton3
+            // tsbTeacher
             // 
-            this.toolStripButton3.Image = global::Student_Management.Properties.Resources._4763274_instructor_professor_teacher_teaching_tutor_icon;
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(126, 57);
-            this.toolStripButton3.Text = "GIẢNG VIÊN";
+            this.tsbTeacher.Image = global::Student_Management.Properties.Resources._4763274_instructor_professor_teacher_teaching_tutor_icon;
+            this.tsbTeacher.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbTeacher.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbTeacher.Name = "tsbTeacher";
+            this.tsbTeacher.Size = new System.Drawing.Size(126, 57);
+            this.tsbTeacher.Text = "GIẢNG VIÊN";
+            this.tsbTeacher.Click += new System.EventHandler(this.tsbTeacher_Click);
             // 
             // toolStripButton4
             // 
@@ -311,7 +312,7 @@
             this.trợGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1572, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1500, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -322,26 +323,28 @@
             this.đổiMậtKhẩuToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(88, 26);
             this.hệThốngToolStripMenuItem.Text = "Hệ Thống";
             // 
             // đăngNhậpToolStripMenuItem
             // 
             this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
-            this.đăngNhậpToolStripMenuItem.Text = "Đăng Nhập";
+            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.đăngNhậpToolStripMenuItem.Text = "Thông Tin Tài Khoản";
             // 
             // đổiMậtKhẩuToolStripMenuItem
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi Mật Khẩu";
+            this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng Xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // danhMụcToolStripMenuItem
             // 
@@ -349,7 +352,7 @@
             this.mônHọcToolStripMenuItem,
             this.lớpToolStripMenuItem});
             this.danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
-            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
+            this.danhMụcToolStripMenuItem.Size = new System.Drawing.Size(90, 26);
             this.danhMụcToolStripMenuItem.Text = "Danh Mục";
             // 
             // mônHọcToolStripMenuItem
@@ -371,7 +374,7 @@
             this.giảngViênToolStripMenuItem,
             this.điểmMônHọcToolStripMenuItem});
             this.quảnLíToolStripMenuItem.Name = "quảnLíToolStripMenuItem";
-            this.quảnLíToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.quảnLíToolStripMenuItem.Size = new System.Drawing.Size(73, 26);
             this.quảnLíToolStripMenuItem.Text = "Quản Lí";
             // 
             // sinhViênToolStripMenuItem
@@ -397,7 +400,7 @@
             this.tìmKiếmToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thôngTinCủaSinhViênToolStripMenuItem});
             this.tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.tìmKiếmToolStripMenuItem.Size = new System.Drawing.Size(86, 26);
             this.tìmKiếmToolStripMenuItem.Text = "Tìm Kiếm";
             // 
             // thôngTinCủaSinhViênToolStripMenuItem
@@ -412,7 +415,7 @@
             this.danhSáchSVToolStripMenuItem,
             this.điểmTổngKếtCủaSinhVIênToolStripMenuItem});
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(86, 26);
             this.thốngKêToolStripMenuItem.Text = "Thống Kê";
             // 
             // danhSáchSVToolStripMenuItem
@@ -430,14 +433,14 @@
             // trợGiúpToolStripMenuItem
             // 
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(79, 26);
             this.trợGiúpToolStripMenuItem.Text = "Trợ Giúp";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1572, 870);
+            this.ClientSize = new System.Drawing.Size(1500, 800);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
@@ -446,7 +449,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMain";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.guna2Panel1.ResumeLayout(false);
@@ -498,7 +501,7 @@
         private System.Windows.Forms.ToolStripMenuItem điểmTổngKếtCủaSinhVIênToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton tsbTeacher;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;

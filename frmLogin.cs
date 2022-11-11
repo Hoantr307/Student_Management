@@ -19,7 +19,7 @@ namespace Student_Management
         {
             InitializeComponent();
         }
-
+        public static string userName;
         bool Login(string UserName, string Password, int type)
         {
             return AccountDAO.Instance.Login(UserName, Password, type);
@@ -39,7 +39,7 @@ namespace Student_Management
             }
             if (Login(UserName, Password, type))
             {
-
+                userName = UserName;
                 frmMain f = new frmMain();
                 f.Show();
                 this.Hide();
