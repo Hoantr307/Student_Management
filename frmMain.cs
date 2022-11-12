@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Student_Management.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,5 +47,23 @@ namespace Student_Management
             frmTeacher f =new frmTeacher();
             f.Show();
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            DataTable dt = DataProvider.Instance.ExecuteQuery("select DisplayName From account where UserName = '" + frmLogin.userName + "' and PassWord = '" + frmLogin.passWord + "' and AccountType = "+ frmLogin.type);
+            foreach (DataRow item in dt.Rows)
+            {
+                lbDisplayName.Text = item["DisplayName"].ToString();
+            }
+            
+        }
+
+        private void tsiProfile_Click(object sender, EventArgs e)
+        {
+            frmProfile f = new frmProfile();
+            f.Show();
+        }
+
+        
     }
 }

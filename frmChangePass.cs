@@ -68,7 +68,9 @@ namespace Student_Management
             {
                 string query = "Update Account set Password = '" + txtNewPassword.Text + "' where UserName = '" + frmLogin.userName + "'";
                 DataProvider.Instance.ExecuteQuery(query);
-                this.Close();
+                MessageBox.Show("Cập Nhật Mật Khẩu Thành Công");
+                MessageBox.Show("Khởi Động Lại Ứng Dụng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                System.Windows.Forms.Application.Restart();
             }
             
         }
