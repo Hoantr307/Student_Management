@@ -1,6 +1,6 @@
 ﻿namespace Student_Management
 {
-    partial class frmTeacher
+    partial class frmScoreManage
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTeacher));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.cboLevel = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -44,7 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvTeacher = new System.Windows.Forms.DataGridView();
+            this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +72,7 @@
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTeacher)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -110,7 +109,7 @@
             // 
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(683, 40);
-            this.txtPhone.Mask = "000 000 0000";
+            this.txtPhone.Mask = "999 000 0000";
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(237, 34);
             this.txtPhone.TabIndex = 6;
@@ -283,7 +282,7 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.dgvTeacher);
+            this.groupBox2.Controls.Add(this.dgvStudents);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(5, 245);
             this.groupBox2.Name = "groupBox2";
@@ -292,27 +291,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách Giảng Viên";
             // 
-            // dgvTeacher
+            // dgvStudents
             // 
-            this.dgvTeacher.AllowUserToAddRows = false;
-            this.dgvTeacher.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvTeacher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTeacher.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvStudents.AllowUserToAddRows = false;
+            this.dgvStudents.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dgvTeacher.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTeacher.Location = new System.Drawing.Point(3, 23);
-            this.dgvTeacher.MultiSelect = false;
-            this.dgvTeacher.Name = "dgvTeacher";
-            this.dgvTeacher.RowHeadersWidth = 51;
-            this.dgvTeacher.RowTemplate.Height = 24;
-            this.dgvTeacher.Size = new System.Drawing.Size(1144, 360);
-            this.dgvTeacher.TabIndex = 0;
-            this.dgvTeacher.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTeacher_CellClick);
+            this.dgvStudents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvStudents.Location = new System.Drawing.Point(3, 23);
+            this.dgvStudents.MultiSelect = false;
+            this.dgvStudents.Name = "dgvStudents";
+            this.dgvStudents.RowHeadersWidth = 51;
+            this.dgvStudents.RowTemplate.Height = 24;
+            this.dgvStudents.Size = new System.Drawing.Size(1144, 360);
+            this.dgvStudents.TabIndex = 0;
+            this.dgvStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTeacher_CellClick);
             // 
             // Column1
             // 
@@ -407,7 +406,6 @@
             // tsbEdit
             // 
             this.tsbEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbEdit.Image = ((System.Drawing.Image)(resources.GetObject("tsbEdit.Image")));
             this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEdit.Name = "tsbEdit";
             this.tsbEdit.Size = new System.Drawing.Size(29, 52);
@@ -417,7 +415,6 @@
             // tsbDelete
             // 
             this.tsbDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsbDelete.Image")));
             this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDelete.Name = "tsbDelete";
             this.tsbDelete.Size = new System.Drawing.Size(29, 52);
@@ -438,7 +435,6 @@
             // tsbPrint
             // 
             this.tsbPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbPrint.Image = ((System.Drawing.Image)(resources.GetObject("tsbPrint.Image")));
             this.tsbPrint.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbPrint.Name = "tsbPrint";
@@ -449,7 +445,6 @@
             // tsbExcel
             // 
             this.tsbExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbExcel.Image = ((System.Drawing.Image)(resources.GetObject("tsbExcel.Image")));
             this.tsbExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbExcel.Name = "tsbExcel";
             this.tsbExcel.Size = new System.Drawing.Size(29, 52);
@@ -573,7 +568,7 @@
             // 
             // guna2BorderlessForm1
             // 
-            this.guna2BorderlessForm1.BorderRadius = 8;
+            this.guna2BorderlessForm1.BorderRadius = 30;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.DragForm = false;
@@ -601,7 +596,7 @@
             this.btnDelete.Text = "Xóa Giảng Viên";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // frmTeacher
+            // frmScoreManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -609,13 +604,13 @@
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmTeacher";
+            this.Name = "frmScoreManage";
             this.Text = "frmTeacher";
             this.Load += new System.EventHandler(this.frmTeacher_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTeacher)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -651,7 +646,7 @@
         private System.Windows.Forms.ToolStripButton tsbSearch;
         private System.Windows.Forms.ToolStripButton tsbPrint;
         private System.Windows.Forms.ToolStripButton tsbExcel;
-        private System.Windows.Forms.DataGridView dgvTeacher;
+        private System.Windows.Forms.DataGridView dgvStudents;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;

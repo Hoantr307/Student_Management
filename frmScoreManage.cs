@@ -11,19 +11,19 @@ using System.Windows.Forms;
 
 namespace Student_Management
 {
-    public partial class frmTeacher : Form
+    public partial class frmScoreManage : Form
     {
-        public frmTeacher()
+        public frmScoreManage()
         {
             InitializeComponent();
-            txtKeyword.Text = "Mã Giảng Viên";
+            txtKeyword.Text = "Mã Sinh Viên";
             txtKeyword.ForeColor = Color.Gray;
         }
 
         private void frmTeacher_Load(object sender, EventArgs e)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("select * from Teacher");
-            dgvTeacher.DataSource = data;
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from teacher");
+            dgvStudents.DataSource = data;
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace Student_Management
             {
                 MessageBox.Show("Bạn Nhập Sai Dữ Liệu Giảng Viên! Yêu Cầu Nhập Lại!");
             }
-            
+
         }
 
         private void tsbEdit_Click(object sender, EventArgs e)
@@ -48,23 +48,23 @@ namespace Student_Management
             frmTeacher_Load(sender, e);
         }
 
-        
+
 
         private void dgvTeacher_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtTeacherID.Text = dgvTeacher.CurrentRow.Cells[0].Value.ToString();
-            txtTeacherName.Text = dgvTeacher.CurrentRow.Cells[1].Value.ToString();
-            cboGender.Text = dgvTeacher.CurrentRow.Cells[2].Value.ToString();
-            txtPhone.Text = dgvTeacher.CurrentRow.Cells[3].Value.ToString();
-            txtEmail.Text = dgvTeacher.CurrentRow.Cells[4].Value.ToString();
-            cboLevel.Text = dgvTeacher.CurrentRow.Cells[5].Value.ToString();
+            txtTeacherID.Text = dgvStudents.CurrentRow.Cells[0].Value.ToString();
+            txtTeacherName.Text = dgvStudents.CurrentRow.Cells[1].Value.ToString();
+            cboGender.Text = dgvStudents.CurrentRow.Cells[2].Value.ToString();
+            txtPhone.Text = dgvStudents.CurrentRow.Cells[3].Value.ToString();
+            txtEmail.Text = dgvStudents.CurrentRow.Cells[4].Value.ToString();
+            cboLevel.Text = dgvStudents.CurrentRow.Cells[5].Value.ToString();
 
-            dgvTeacher.CurrentRow.ContextMenuStrip = contextMenuStrip;
+            dgvStudents.CurrentRow.ContextMenuStrip = contextMenuStrip;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string query = $"delete Teacher where TeacherID = '{txtTeacherID.Text}'";
+            string query = $"delete student where StudentID = '{txtTeacherID.Text}'";
             DataProvider.Instance.ExecuteQuery(query);
             txtTeacherID.Text = "";
             txtTeacherName.Text = "";
@@ -77,7 +77,7 @@ namespace Student_Management
 
         private void tsbSearch_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dgvTeacher.Rows)
+            foreach (DataGridViewRow row in dgvStudents.Rows)
             {
                 if (row.Cells[0].Value.ToString().Contains(txtKeyword.Text))
                 {
@@ -107,32 +107,31 @@ namespace Student_Management
 
         private void tsbPrint_Click(object sender, EventArgs e)
         {
-            frmReportTeacher f = new frmReportTeacher();
-            f.Show();
+            
         }
 
         private void tsbExcel_Click(object sender, EventArgs e)
         {
-            if (dgvTeacher.Rows.Count > 0)
+            if (dgvStudents.Rows.Count > 0)
             {
                 Microsoft.Office.Interop.Excel.Application XcelApp = new Microsoft.Office.Interop.Excel.Application();
                 XcelApp.Application.Workbooks.Add(Type.Missing);
                 XcelApp.Cells[1, 4] = "Danh Sách Giảng Viên";
-                for (int i = 1; i < dgvTeacher.Columns.Count + 1; i++)
+                for (int i = 1; i < dgvStudents.Columns.Count + 1; i++)
                 {
-                    XcelApp.Cells[2, i] = dgvTeacher.Columns[i - 1].HeaderText;
+                    XcelApp.Cells[2, i] = dgvStudents.Columns[i - 1].HeaderText;
                 }
-                for (int i = 0; i < dgvTeacher.Rows.Count; i++)
+                for (int i = 0; i < dgvStudents.Rows.Count; i++)
                 {
-                    
-                    for (int j = 0; j < dgvTeacher.Columns.Count; j++)
+
+                    for (int j = 0; j < dgvStudents.Columns.Count; j++)
                     {
-                        XcelApp.Cells[i + 3, j + 1] = dgvTeacher.Rows[i].Cells[j].Value.ToString();
+                        XcelApp.Cells[i + 3, j + 1] = dgvStudents.Rows[i].Cells[j].Value.ToString();
                     }
                 }
 
-                XcelApp.Cells[dgvTeacher.Rows.Count + 4, 1] = "Người Lập danh sách";
-                XcelApp.Cells[dgvTeacher.Rows.Count + 4, 5] = "Ký và Ghi rõ họ tên";
+                XcelApp.Cells[dgvStudents.Rows.Count + 4, 1] = "Người Lập danh sách";
+                XcelApp.Cells[dgvStudents.Rows.Count + 4, 5] = "Ký và Ghi rõ họ tên";
                 XcelApp.Columns.AutoFit();
                 XcelApp.Visible = true;
             }

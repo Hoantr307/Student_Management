@@ -32,18 +32,16 @@ create table Class
 	ClassName Nvarchar(50)
 )
 go
-
 create table Teacher
 (
 	TeacherID int primary key,
 	TeacherName Nvarchar(50),
 	Gender nchar(3) constraint Ck_T_Gd check(Gender in (N'Nam' , N'Nữ')),
-	Phone varchar(10),
+	Phone varchar(20),
 	Email varchar(50) constraint ck_tc_E check(Email like '%@%'),
 	TeacherType nvarchar(50)
 )
 go
-
 create table Subject
 (
 	SubjectID varchar(10) primary key,
