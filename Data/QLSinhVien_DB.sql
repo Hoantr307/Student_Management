@@ -12,6 +12,9 @@ create table Account
 )
 go
 
+select * from Account
+
+
 create table Student
 (
 	StudentID int primary key,
@@ -48,7 +51,7 @@ create table Subject
 	SubjectName Nvarchar(100),
 	LessonNumber int,
 	TeacherID int foreign key references Teacher(TeacherID) on delete cascade,
-	Semester bit
+	Semester int
 )
 go
 

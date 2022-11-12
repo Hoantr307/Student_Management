@@ -44,8 +44,24 @@ namespace Student_Management
 
         private void tsbTeacher_Click(object sender, EventArgs e)
         {
-            frmTeacher f =new frmTeacher();
-            f.Show();
+            bool isExists = false;
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmTeacher")
+                {
+                    f.Activate();
+                    isExists = true;
+                    break;
+                }
+            }
+            if (!isExists)
+            {
+                frmTeacher f = new frmTeacher();
+                f.MdiParent = this;
+                f.Dock = DockStyle.Fill;
+                f.Show();
+            }
+
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -61,9 +77,48 @@ namespace Student_Management
         private void tsiProfile_Click(object sender, EventArgs e)
         {
             frmProfile f = new frmProfile();
-            f.Show();
+            f.ShowDialog();
         }
 
-        
+        private void tsbSubject_Click(object sender, EventArgs e)
+        {
+            bool isExists = false;
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmSubject")
+                {
+                    f.Activate();
+                    isExists = true;
+                    break;
+                }
+            }
+            if (!isExists)
+            {
+                frmSubject f = new frmSubject();
+                f.MdiParent = this;
+                f.Dock = DockStyle.Fill;
+                f.Show();
+            }
+        }
+
+        private void tsbHome_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                f.Close();
+            }
+        }
+
+        private void giảngViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTeacher f = new frmTeacher();
+            f.ShowDialog();
+        }
+
+        private void mônHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSubject f = new frmSubject();
+            f.ShowDialog();
+        }
     }
 }

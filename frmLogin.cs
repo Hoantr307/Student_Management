@@ -18,6 +18,10 @@ namespace Student_Management
         public frmLogin()
         {
             InitializeComponent();
+            //
+            txtUsername.Text = "Hoan";
+            txtPassword.Text = "Hoan";
+            cboPosition.SelectedIndex = 1;
         }
         public static string userName;
         public static string passWord;
