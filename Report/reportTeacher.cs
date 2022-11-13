@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Student_Management {
+namespace Student_Management.Report {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace Student_Management {
         
         public override string FullResourceName {
             get {
-                return "Student_Management.reportTeacher.rpt";
+                return "Student_Management.Report.reportTeacher.rpt";
             }
             set {
                 // Do nothing
