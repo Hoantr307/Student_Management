@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSubject));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtLessonNumber = new System.Windows.Forms.MaskedTextBox();
             this.cboSemester = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -51,11 +52,12 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbEdit = new System.Windows.Forms.ToolStripButton();
-            this.tsbDelete = new System.Windows.Forms.ToolStripButton();
             this.tsbSearch = new System.Windows.Forms.ToolStripButton();
             this.tsbPrint = new System.Windows.Forms.ToolStripButton();
             this.tsbExcel = new System.Windows.Forms.ToolStripButton();
             this.txtKeyword = new System.Windows.Forms.ToolStripTextBox();
+            this.tsbImport = new System.Windows.Forms.ToolStripButton();
+            this.txtFileName = new System.Windows.Forms.ToolStripTextBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -338,11 +340,12 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbAdd,
             this.tsbEdit,
-            this.tsbDelete,
             this.tsbSearch,
             this.tsbPrint,
             this.tsbExcel,
-            this.txtKeyword});
+            this.txtKeyword,
+            this.tsbImport,
+            this.txtFileName});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1158, 55);
@@ -363,19 +366,13 @@
             // tsbEdit
             // 
             this.tsbEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbEdit.Image = global::Student_Management.Properties.Resources._4763274_instructor_professor_teacher_teaching_tutor_icon;
+            this.tsbEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEdit.Name = "tsbEdit";
-            this.tsbEdit.Size = new System.Drawing.Size(29, 52);
+            this.tsbEdit.Size = new System.Drawing.Size(36, 52);
             this.tsbEdit.Text = "toolStripButton2";
             this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
-            // 
-            // tsbDelete
-            // 
-            this.tsbDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbDelete.Name = "tsbDelete";
-            this.tsbDelete.Size = new System.Drawing.Size(29, 52);
-            this.tsbDelete.Text = "toolStripButton3";
             // 
             // tsbSearch
             // 
@@ -392,6 +389,7 @@
             // tsbPrint
             // 
             this.tsbPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbPrint.Image = global::Student_Management.Properties.Resources.printer;
             this.tsbPrint.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbPrint.Name = "tsbPrint";
@@ -402,6 +400,8 @@
             // tsbExcel
             // 
             this.tsbExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbExcel.Image = global::Student_Management.Properties.Resources.excel;
+            this.tsbExcel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbExcel.Name = "tsbExcel";
             this.tsbExcel.Size = new System.Drawing.Size(29, 52);
@@ -418,6 +418,22 @@
             this.txtKeyword.Size = new System.Drawing.Size(180, 30);
             this.txtKeyword.Enter += new System.EventHandler(this.txtKeyword_Enter);
             this.txtKeyword.Leave += new System.EventHandler(this.txtKeyword_Leave);
+            // 
+            // tsbImport
+            // 
+            this.tsbImport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbImport.Image = ((System.Drawing.Image)(resources.GetObject("tsbImport.Image")));
+            this.tsbImport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbImport.Name = "tsbImport";
+            this.tsbImport.Size = new System.Drawing.Size(29, 52);
+            this.tsbImport.Text = "toolStripButton1";
+            this.tsbImport.Click += new System.EventHandler(this.tsbImport_Click);
+            // 
+            // txtFileName
+            // 
+            this.txtFileName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(100, 55);
             // 
             // guna2DragControl1
             // 
@@ -591,7 +607,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbAdd;
         private System.Windows.Forms.ToolStripButton tsbEdit;
-        private System.Windows.Forms.ToolStripButton tsbDelete;
         private System.Windows.Forms.ToolStripTextBox txtKeyword;
         private System.Windows.Forms.ToolStripButton tsbSearch;
         private System.Windows.Forms.ToolStripButton tsbPrint;
@@ -612,5 +627,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem rToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton tsbImport;
+        private System.Windows.Forms.ToolStripTextBox txtFileName;
     }
 }

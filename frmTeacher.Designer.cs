@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTeacher));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             this.cboLevel = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cboGender = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -60,6 +61,8 @@
             this.tsbPrint = new System.Windows.Forms.ToolStripButton();
             this.tsbExcel = new System.Windows.Forms.ToolStripButton();
             this.txtKeyword = new System.Windows.Forms.ToolStripTextBox();
+            this.tsbImport = new System.Windows.Forms.ToolStripButton();
+            this.txtFilePath = new System.Windows.Forms.ToolStripTextBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -83,6 +86,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtPhone);
             this.groupBox1.Controls.Add(this.cboLevel);
             this.groupBox1.Controls.Add(this.cboGender);
@@ -102,6 +106,13 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Giảng Viên";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
             // 
             // txtPhone
             // 
@@ -383,7 +394,9 @@
             this.tsbSearch,
             this.tsbPrint,
             this.tsbExcel,
-            this.txtKeyword});
+            this.txtKeyword,
+            this.tsbImport,
+            this.txtFilePath});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1158, 55);
@@ -463,6 +476,22 @@
             this.txtKeyword.Size = new System.Drawing.Size(180, 30);
             this.txtKeyword.Enter += new System.EventHandler(this.txtKeyword_Enter);
             this.txtKeyword.Leave += new System.EventHandler(this.txtKeyword_Leave);
+            // 
+            // tsbImport
+            // 
+            this.tsbImport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbImport.Image = ((System.Drawing.Image)(resources.GetObject("tsbImport.Image")));
+            this.tsbImport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbImport.Name = "tsbImport";
+            this.tsbImport.Size = new System.Drawing.Size(29, 52);
+            this.tsbImport.Text = "toolStripButton1";
+            this.tsbImport.Click += new System.EventHandler(this.tsbImport_Click);
+            // 
+            // txtFilePath
+            // 
+            this.txtFilePath.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFilePath.Name = "txtFilePath";
+            this.txtFilePath.Size = new System.Drawing.Size(100, 55);
             // 
             // guna2DragControl1
             // 
@@ -631,5 +660,8 @@
         private Guna.UI2.WinForms.Guna2ComboBox cboLevel;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.MaskedTextBox txtPhone;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripButton tsbImport;
+        private System.Windows.Forms.ToolStripTextBox txtFilePath;
     }
 }

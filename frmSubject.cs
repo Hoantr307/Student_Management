@@ -1,9 +1,11 @@
-﻿using Student_Management.DAO;
+﻿using ExcelDataReader;
+using Student_Management.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,18 +42,14 @@ namespace Student_Management
 
         private void tsbEdit_Click(object sender, EventArgs e)
         {
-            string query = $"update ";
+            string query = $"update Subject set SubjectName = N'{txtSubjectName.Text}', LessonNumber = {txtLessonNumber.Text}, TeacherID = {cboTeachers.SelectedValue}, Semester = {cboSemester.Text} Where SubjectID = '{txtSubjectID.Text}'";
             DataProvider.Instance.ExecuteQuery(query);
             frmSubject_Load(sender, e);
         }
 
-
-
-        
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string query = $"delete ";
+            string query = $"delete Subject Where SubjectID = '{txtSubjectID.Text}'";
             DataProvider.Instance.ExecuteQuery(query);
             txtSubjectID.Text = "";
             txtSubjectName.Text = "";
@@ -102,22 +100,21 @@ namespace Student_Management
             {
                 Microsoft.Office.Interop.Excel.Application XcelApp = new Microsoft.Office.Interop.Excel.Application();
                 XcelApp.Application.Workbooks.Add(Type.Missing);
-                XcelApp.Cells[1, 4] = "Danh Sách Giảng Viên";
                 for (int i = 1; i < dgvSubject.Columns.Count + 1; i++)
                 {
-                    XcelApp.Cells[2, i] = dgvSubject.Columns[i - 1].HeaderText;
+                    XcelApp.Cells[1, i] = dgvSubject.Columns[i - 1].HeaderText;
                 }
                 for (int i = 0; i < dgvSubject.Rows.Count; i++)
                 {
 
                     for (int j = 0; j < dgvSubject.Columns.Count; j++)
                     {
-                        XcelApp.Cells[i + 3, j + 1] = dgvSubject.Rows[i].Cells[j].Value.ToString();
+                        XcelApp.Cells[i + 2, j + 1] = dgvSubject.Rows[i].Cells[j].Value.ToString();
                     }
                 }
 
-                XcelApp.Cells[dgvSubject.Rows.Count + 4, 1] = "Người Lập danh sách";
-                XcelApp.Cells[dgvSubject.Rows.Count + 4, 5] = "Ký và Ghi rõ họ tên";
+                /*XcelApp.Cells[dgvSubject.Rows.Count + 4, 1] = "Người Lập danh sách";
+                XcelApp.Cells[dgvSubject.Rows.Count + 4, 5] = "Ký và Ghi rõ họ tên";*/
                 XcelApp.Columns.AutoFit();
                 XcelApp.Visible = true;
             }
@@ -154,6 +151,61 @@ namespace Student_Management
         private void rToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmSubject_Load(sender, e);
+            txtSubjectID.Text = "";
+            txtSubjectName.Text = "";
+            txtLessonNumber.Text = "";
+            cboTeachers.Text = "";
+            cboSemester.Text = "";
         }
+
+        private void tsbImport_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Excel File|*.xlsx|Excel File 97-2003|*.xls", ValidateNames = true, Multiselect = false })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    DataSet ds;
+                    using (var stream = File.Open(ofd.FileName, FileMode.Open, FileAccess.Read))
+                    {
+                        
+                        IExcelDataReader reader;
+                        if (ofd.FilterIndex == 2)
+                        {
+                            reader = ExcelReaderFactory.CreateBinaryReader(stream);
+                        }
+                        else
+                        {
+                            reader = ExcelReaderFactory.CreateOpenXmlReader(stream);
+                        }
+
+                        ds = reader.AsDataSet(new ExcelDataSetConfiguration()
+                        {
+                            ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
+                            {
+                                UseHeaderRow = true
+                            }
+                        });
+
+                        
+                        DataTable data = ds.Tables[0];
+                        if (dgvSubject.ColumnCount == data.Columns.Count)
+                        {
+                            dgvSubject.Columns.Clear();
+                            dgvSubject.DataSource = data;
+                            txtFileName.Text = ofd.FileName;
+                        }
+                        else
+                        {
+                            MessageBox.Show("File Excel Bạn Vừa Chọn Không Chứa Được Trong Bảng");
+                        }
+                        
+                        reader.Close();
+
+                    }
+                }
+            }
+        }
+
+       
     }
 }
