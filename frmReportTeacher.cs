@@ -20,7 +20,7 @@ namespace Student_Management
 
         private void frmReportTeacher_Load(object sender, EventArgs e)
         {
-            reportTeacher rpt = new reportTeacher();
+            Report.reportTeacher rpt = new Report.reportTeacher();
             DataTable dt = DataProvider.Instance.ExecuteQuery("Select * from Teacher");
             rpt.SetDataSource(dt);
             crvTeacher.ReportSource = rpt;
