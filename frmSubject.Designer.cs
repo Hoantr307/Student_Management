@@ -450,7 +450,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 31);
             this.label1.TabIndex = 4;
-            this.label1.Text = "QUẢN LÝ ĐIỂM";
+            this.label1.Text = "QUẢN LÝ MÔN HỌC";
             // 
             // guna2ControlBox2
             // 
