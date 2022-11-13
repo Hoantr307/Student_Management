@@ -91,7 +91,10 @@ namespace Student_Management
 
         private void tsbPrint_Click(object sender, EventArgs e)
         {
-
+            frmReportSubject f = new frmReportSubject();
+            f.ShowDialog();
+            f.WindowState = FormWindowState.Maximized;
+            f.StartPosition = FormStartPosition.CenterParent;
         }
 
         private void tsbExcel_Click(object sender, EventArgs e)
