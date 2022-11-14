@@ -63,6 +63,26 @@ namespace Student_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _103409_text_add_book_icon {
+            get {
+                object obj = ResourceManager.GetObject("103409_text_add_book_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _103514_edit_text_document_icon {
+            get {
+                object obj = ResourceManager.GetObject("103514_edit_text_document_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1519780_colorful_document_office_paper_school_icon {
             get {
                 object obj = ResourceManager.GetObject("1519780_colorful_document_office_paper_school_icon", resourceCulture);
@@ -83,6 +103,26 @@ namespace Student_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _216490_add_user_icon {
+            get {
+                object obj = ResourceManager.GetObject("216490_add_user_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _216490_add_user_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("216490_add_user_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4763274_instructor_professor_teacher_teaching_tutor_icon {
             get {
                 object obj = ResourceManager.GetObject("4763274_instructor_professor_teacher_teaching_tutor_icon", resourceCulture);
@@ -96,6 +136,16 @@ namespace Student_Management.Properties {
         internal static System.Drawing.Bitmap _62017743_hoạt_hình_dễ_thương_vẽ_tay_du_lịch_kiểu_liền_mạch {
             get {
                 object obj = ResourceManager.GetObject("62017743-hoạt-hình-dễ-thương-vẽ-tay-du-lịch-kiểu-liền-mạch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7148704_import_download_icon {
+            get {
+                object obj = ResourceManager.GetObject("7148704_import_download_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +176,16 @@ namespace Student_Management.Properties {
         internal static System.Drawing.Bitmap _8665051_book_journal_whills_icon {
             get {
                 object obj = ResourceManager.GetObject("8665051_book_journal_whills_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9004762_search_find_zoom_magnifier_icon {
+            get {
+                object obj = ResourceManager.GetObject("9004762_search_find_zoom_magnifier_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
