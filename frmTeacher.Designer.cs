@@ -168,12 +168,12 @@
             this.txtTeacherName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTeacherName.ForeColor = System.Drawing.Color.Black;
             this.txtTeacherName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTeacherName.Location = new System.Drawing.Point(243, 83);
+            this.txtTeacherName.Location = new System.Drawing.Point(243, 86);
             this.txtTeacherName.Name = "txtTeacherName";
             this.txtTeacherName.PasswordChar = '\0';
             this.txtTeacherName.PlaceholderText = "";
             this.txtTeacherName.SelectedText = "";
-            this.txtTeacherName.Size = new System.Drawing.Size(237, 41);
+            this.txtTeacherName.Size = new System.Drawing.Size(237, 38);
             this.txtTeacherName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtTeacherName.TabIndex = 4;
             // 
@@ -181,7 +181,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(579, 80);
+            this.label6.Location = new System.Drawing.Point(579, 86);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 20);
             this.label6.TabIndex = 1;
@@ -204,7 +204,7 @@
             this.txtTeacherID.PasswordChar = '\0';
             this.txtTeacherID.PlaceholderText = "";
             this.txtTeacherID.SelectedText = "";
-            this.txtTeacherID.Size = new System.Drawing.Size(237, 41);
+            this.txtTeacherID.Size = new System.Drawing.Size(237, 39);
             this.txtTeacherID.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtTeacherID.TabIndex = 4;
             // 
@@ -222,7 +222,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(111, 123);
+            this.label4.Location = new System.Drawing.Point(111, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 1;
@@ -253,7 +253,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(111, 83);
+            this.label3.Location = new System.Drawing.Point(111, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 1;
