@@ -26,19 +26,28 @@ namespace Student_Management
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("select * from Result");
             dgvScores.DataSource = data;
+            DataTable dt = DataProvider.Instance.ExecuteQuery("select * from Class");
+            cboClasses.DataSource = dt;
+            cboClasses.DisplayMember = "ClassName";
+            cboClasses.ValueMember = "ClassID";
+            DataTable dt1 = DataProvider.Instance.ExecuteQuery("select * from Subject");
+            cboSubject.DataSource = dt1;
+            cboSubject.DisplayMember = "SubjectName";
+            cboSubject.ValueMember = "SubjectID";
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                string Query = $"insert ";
+                string Query = $"insert Result values(" +
+                    $"'{txtStudentID.Text}', N'{txtStudentName.Text}', '{cboClasses.Text}', '{cboSubject.Text}', {txtScoreAvg.Text}, {txtScoreElement.Text}, {txtScorePractice.Text}, {txtScoreFinal.Text}, N'{cboConduct.Text}', N'{txtDescription.Text}')";
                 DataProvider.Instance.ExecuteQuery(Query);
                 frmTeacher_Load(sender, e);
             }
             catch (Exception)
             {
-                MessageBox.Show("Bạn Nhập Sai Dữ Liệu Giảng Viên! Yêu Cầu Nhập Lại!");
+                MessageBox.Show("Bạn Nhập Sai Dữ Liệu Sinh Viên! Yêu Cầu Nhập Lại!");
             }
 
         }
@@ -54,7 +63,7 @@ namespace Student_Management
 
         private void dgvTeacher_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtStudent.Text = dgvScores.CurrentRow.Cells[0].Value.ToString();
+            txtStudentID.Text = dgvScores.CurrentRow.Cells[0].Value.ToString();
             txtStudentName.Text = dgvScores.CurrentRow.Cells[1].Value.ToString();
             cboClasses.Text = dgvScores.CurrentRow.Cells[2].Value.ToString();
             cboClasses.Text = dgvScores.CurrentRow.Cells[3].Value.ToString();
@@ -66,9 +75,9 @@ namespace Student_Management
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string query = $"delete student where StudentID = '{txtStudent.Text}'";
+            string query = $"delete student where StudentID = '{txtStudentID.Text}'";
             DataProvider.Instance.ExecuteQuery(query);
-            txtStudent.Text = "";
+            txtStudentID.Text = "";
             txtStudentName.Text = "";
             cboClasses.Text = "";
             cboClasses.Text = "";
@@ -93,14 +102,14 @@ namespace Student_Management
         {
             if (txtKeyword.Text == "")
             {
-                txtKeyword.Text = "Mã Giảng Viên";
+                txtKeyword.Text = "Mã Sinh Viên";
                 txtKeyword.ForeColor = Color.Gray;
             }
         }
 
         private void txtKeyword_Enter(object sender, EventArgs e)
         {
-            if (txtKeyword.Text == "Mã Giảng Viên")
+            if (txtKeyword.Text == "Mã Sinh Viên")
             {
                 txtKeyword.Text = "";
                 txtKeyword.ForeColor = Color.Black;
@@ -182,6 +191,22 @@ namespace Student_Management
                     }
                 }
             }
+        }
+
+        private void dgvScores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtStudentID.Text = dgvScores.CurrentRow.Cells[0].Value.ToString();
+            txtStudentName.Text = dgvScores.CurrentRow.Cells[1].Value.ToString();
+            cboClasses.Text = dgvScores.CurrentRow.Cells[2].Value.ToString();
+            cboSubject.Text = dgvScores.CurrentRow.Cells[3].Value.ToString();
+            txtScoreAvg.Text = dgvScores.CurrentRow.Cells[4].Value.ToString();
+            txtScoreElement.Text = dgvScores.CurrentRow.Cells[5].Value.ToString();
+            txtScorePractice.Text = dgvScores.CurrentRow.Cells[6].Value.ToString();
+            txtScoreFinal.Text = dgvScores.CurrentRow.Cells[7].Value.ToString();
+            cboConduct.Text = dgvScores.CurrentRow.Cells[8].Value.ToString();
+            txtDescription.Text = dgvScores.CurrentRow.Cells[9].Value.ToString();
+
+            dgvScores.CurrentRow.ContextMenuStrip = contextMenuStrip;
         }
     }
 }

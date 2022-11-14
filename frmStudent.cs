@@ -26,26 +26,31 @@ namespace Student_Management
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("select * from Student");
             dgvStudent.DataSource = data;
+            DataTable dt = DataProvider.Instance.ExecuteQuery("select * from Class");
+            cboClassID.DataSource = dt;
+            cboClassID.DisplayMember = "ClassName";
+            cboClassID.ValueMember = "ClassID";
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                string Query = $"insert Student values('{txtStudentID.Text}', N'{txtStudentName.Text}', '{txtBirth.Text}', '{txtAddress.Text}', N'{cboClassID.Text}')";
+                string Query = $"insert Student values('{txtStudentID.Text}', N'{txtStudentName.Text}', '{txtBirth.Text}',N'{cboGender.Text}', '{txtAddress.Text}', N'{cboClassID.Text}')";
                 DataProvider.Instance.ExecuteQuery(Query);
                 frmStudent_Load(sender, e);
             }
             catch (Exception)
             {
-                MessageBox.Show("Bạn Nhập Sai Dữ Liệu Giảng Viên! Yêu Cầu Nhập Lại!");
+                MessageBox.Show("Bạn Nhập Sai Dữ Liệu Sinh Viên! Yêu Cầu Nhập Lại!");
             }
 
         }
 
         private void tsbEdit_Click(object sender, EventArgs e)
         {
-            string query = $"update Student set StudentName = N'{txtStudentName.Text}', Birthday = N'{txtBirth.Text}', Gender = '{cboGender.Text}', Address = '{txtAddress.Text}', ClassID = N'{cboClassID.Text}' where StudentID = '{txtStudentID.Text}'";
+            string query = $"update Student set " +
+                $"StudentName = N'{txtStudentName.Text}', Birthday = '{txtBirth.Text}', Gender = N'{cboGender.Text}', Address = N'{txtAddress.Text}', ClassID = {cboClassID.Text} where StudentID = {txtStudentID.Text}";
             DataProvider.Instance.ExecuteQuery(query);
             frmStudent_Load(sender, e);
         }
@@ -132,8 +137,6 @@ namespace Student_Management
                     }
                 }
 
-                XcelApp.Cells[dgvStudent.Rows.Count + 4, 1] = "Người Lập danh sách";
-                XcelApp.Cells[dgvStudent.Rows.Count + 4, 5] = "Ký và Ghi rõ họ tên";
                 XcelApp.Columns.AutoFit();
                 XcelApp.Visible = true;
             }
@@ -169,9 +172,16 @@ namespace Student_Management
 
 
                         DataTable data = ds.Tables[0];
-                        dgvStudent.Columns.Clear();
-                        dgvStudent.DataSource = data;
-
+                        if (dgvStudent.ColumnCount == data.Columns.Count)
+                        {
+                            dgvStudent.Columns.Clear();
+                            dgvStudent.DataSource = data;
+                            txtFilePath.Text = ofd.FileName;
+                        }
+                        else
+                        {
+                            MessageBox.Show("File Excel Bạn Vừa Chọn Không Chứa Được Trong Bảng");
+                        }
                         reader.Close();
 
                     }
@@ -179,9 +189,8 @@ namespace Student_Management
             }
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
+       
 
-        }
+       
     }
 }

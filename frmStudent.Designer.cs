@@ -61,7 +61,6 @@
             this.txtKeyword = new System.Windows.Forms.ToolStripTextBox();
             this.tsbImport = new System.Windows.Forms.ToolStripButton();
             this.txtFilePath = new System.Windows.Forms.ToolStripTextBox();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
@@ -101,7 +100,6 @@
             // 
             this.txtBirth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBirth.Location = new System.Drawing.Point(243, 125);
-            this.txtBirth.Mask = "0000-00-00";
             this.txtBirth.Name = "txtBirth";
             this.txtBirth.Size = new System.Drawing.Size(237, 34);
             this.txtBirth.TabIndex = 6;
@@ -116,8 +114,6 @@
             this.cboClassID.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboClassID.ForeColor = System.Drawing.Color.Black;
             this.cboClassID.ItemHeight = 30;
-            this.cboClassID.Items.AddRange(new object[] {
-            "125213"});
             this.cboClassID.Location = new System.Drawing.Point(683, 130);
             this.cboClassID.Name = "cboClassID";
             this.cboClassID.Size = new System.Drawing.Size(237, 36);
@@ -379,7 +375,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(1174, 55);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // tsbAdd
             // 
@@ -462,12 +457,6 @@
             this.txtFilePath.Name = "txtFilePath";
             this.txtFilePath.Size = new System.Drawing.Size(100, 55);
             // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.DragStartTransparencyValue = 1D;
-            this.guna2DragControl1.UseTransparentDrag = true;
-            // 
             // contextMenuStrip
             // 
             this.contextMenuStrip.BackColor = System.Drawing.SystemColors.Control;
@@ -476,7 +465,7 @@
             this.btnDelete});
             this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.ShowCheckMargin = true;
-            this.contextMenuStrip.Size = new System.Drawing.Size(236, 44);
+            this.contextMenuStrip.Size = new System.Drawing.Size(224, 44);
             // 
             // btnDelete
             // 
@@ -486,7 +475,7 @@
             this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(240, 40);
-            this.btnDelete.Text = "Xóa Giảng Viên";
+            this.btnDelete.Text = "Xóa Sinh Viên";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // frmStudent
@@ -528,7 +517,6 @@
         private System.Windows.Forms.ToolStripButton tsbPrint;
         private System.Windows.Forms.ToolStripButton tsbExcel;
         private System.Windows.Forms.DataGridView dgvStudent;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem btnDelete;
         private Guna.UI2.WinForms.Guna2ComboBox cboGender;

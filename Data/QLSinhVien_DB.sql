@@ -25,6 +25,7 @@ create table Student
 	ClassID int 
 )
 go
+select * FROM Class
 alter table Student 
 add constraint FK_S_ClassID foreign key (ClassID) references Class(ClassID)
 
@@ -35,6 +36,7 @@ create table Class
 	ClassName Nvarchar(50)
 )
 go
+
 create table Teacher
 (
 	TeacherID int primary key,
@@ -70,7 +72,7 @@ create table Result
 
 	constraint pk_st_cl_sj primary key(StudentID, SubjectID)
 )
-alter table Result add constraint FK_Rs_sj foreign key (SubjectID) references Subject(SubjectID)
+alter table Result add constraint FK_Rs_Subject foreign key (SubjectID) references Subject(SubjectID)
 go
 alter table Result add constraint FK_Rs_Class foreign key (ClassID) references Class(ClassID)
 go

@@ -31,9 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtLessonNumber = new System.Windows.Forms.MaskedTextBox();
+            this.cboSemester = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cboTeachers = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSubjectName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtSubjectID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,31 +49,25 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.txtKeyword = new System.Windows.Forms.ToolStripTextBox();
-            this.txtFileName = new System.Windows.Forms.ToolStripTextBox();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbEdit = new System.Windows.Forms.ToolStripButton();
             this.tsbSearch = new System.Windows.Forms.ToolStripButton();
             this.tsbPrint = new System.Windows.Forms.ToolStripButton();
             this.tsbExcel = new System.Windows.Forms.ToolStripButton();
+            this.txtKeyword = new System.Windows.Forms.ToolStripTextBox();
             this.tsbImport = new System.Windows.Forms.ToolStripButton();
             this.txtFileName = new System.Windows.Forms.ToolStripTextBox();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cboSemester = new Guna.UI2.WinForms.Guna2ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.contextMenuStrip.SuspendLayout();
             this.guna2ContextMenuStrip1.SuspendLayout();
+            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -106,6 +102,25 @@
             this.txtLessonNumber.Size = new System.Drawing.Size(237, 34);
             this.txtLessonNumber.TabIndex = 6;
             this.txtLessonNumber.ValidatingType = typeof(int);
+            // 
+            // cboSemester
+            // 
+            this.cboSemester.BackColor = System.Drawing.Color.Transparent;
+            this.cboSemester.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboSemester.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSemester.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboSemester.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboSemester.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cboSemester.ForeColor = System.Drawing.Color.Black;
+            this.cboSemester.ItemHeight = 30;
+            this.cboSemester.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.cboSemester.Location = new System.Drawing.Point(679, 88);
+            this.cboSemester.Name = "cboSemester";
+            this.cboSemester.Size = new System.Drawing.Size(157, 36);
+            this.cboSemester.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.cboSemester.TabIndex = 5;
             // 
             // cboTeachers
             // 
@@ -159,6 +174,16 @@
             this.txtSubjectName.Size = new System.Drawing.Size(237, 41);
             this.txtSubjectName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtSubjectName.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(581, 96);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Học Kỳ:";
             // 
             // txtSubjectID
             // 
@@ -316,65 +341,6 @@
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // txtKeyword
-            // 
-            this.txtKeyword.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.txtKeyword.AutoSize = false;
-            this.txtKeyword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKeyword.Name = "txtKeyword";
-            this.txtKeyword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtKeyword.Size = new System.Drawing.Size(180, 30);
-            this.txtKeyword.Enter += new System.EventHandler(this.txtKeyword_Enter);
-            this.txtKeyword.Leave += new System.EventHandler(this.txtKeyword_Leave);
-            // 
-            // txtFileName
-            // 
-            this.txtFileName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtFileName.Name = "txtFileName";
-            this.txtFileName.Size = new System.Drawing.Size(100, 55);
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.DragStartTransparencyValue = 1D;
-            this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // contextMenuStrip
-            // 
-            this.contextMenuStrip.BackColor = System.Drawing.SystemColors.Control;
-            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnDelete});
-            this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.ShowCheckMargin = true;
-            this.contextMenuStrip.Size = new System.Drawing.Size(222, 44);
-            // 
-            // guna2ContextMenuStrip1
-            // 
-            this.guna2ContextMenuStrip1.AutoSize = false;
-            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.guna2ContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rToolStripMenuItem});
-            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
-            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
-            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
-            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(250, 44);
-            // 
-            // rToolStripMenuItem
-            // 
-            this.rToolStripMenuItem.AutoSize = false;
-            this.rToolStripMenuItem.Name = "rToolStripMenuItem";
-            this.rToolStripMenuItem.Size = new System.Drawing.Size(250, 40);
-            this.rToolStripMenuItem.Text = "Refresh";
-            this.rToolStripMenuItem.Click += new System.EventHandler(this.rToolStripMenuItem_Click);
-            // 
             // tsbAdd
             // 
             this.tsbAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -431,6 +397,17 @@
             this.tsbExcel.Text = "toolStripButton6";
             this.tsbExcel.Click += new System.EventHandler(this.tsbExcel_Click);
             // 
+            // txtKeyword
+            // 
+            this.txtKeyword.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.txtKeyword.AutoSize = false;
+            this.txtKeyword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKeyword.Name = "txtKeyword";
+            this.txtKeyword.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtKeyword.Size = new System.Drawing.Size(180, 30);
+            this.txtKeyword.Enter += new System.EventHandler(this.txtKeyword_Enter);
+            this.txtKeyword.Leave += new System.EventHandler(this.txtKeyword_Leave);
+            // 
             // tsbImport
             // 
             this.tsbImport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -447,13 +424,31 @@
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(100, 55);
             // 
-            // guna2DragControl1
+            // guna2ContextMenuStrip1
             // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.DragStartTransparencyValue = 1D;
-            this.guna2DragControl1.UseTransparentDrag = true;
-           
-            
+            this.guna2ContextMenuStrip1.AutoSize = false;
+            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.guna2ContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rToolStripMenuItem});
+            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(250, 44);
+            // 
+            // rToolStripMenuItem
+            // 
+            this.rToolStripMenuItem.AutoSize = false;
+            this.rToolStripMenuItem.Name = "rToolStripMenuItem";
+            this.rToolStripMenuItem.Size = new System.Drawing.Size(250, 40);
+            this.rToolStripMenuItem.Text = "Refresh";
+            this.rToolStripMenuItem.Click += new System.EventHandler(this.rToolStripMenuItem_Click);
             // 
             // contextMenuStrip
             // 
@@ -476,35 +471,6 @@
             this.btnDelete.Text = "Xóa Môn Học";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(581, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 20);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Học Kỳ:";
-            // 
-            // cboSemester
-            // 
-            this.cboSemester.BackColor = System.Drawing.Color.Transparent;
-            this.cboSemester.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboSemester.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSemester.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboSemester.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboSemester.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboSemester.ForeColor = System.Drawing.Color.Black;
-            this.cboSemester.ItemHeight = 30;
-            this.cboSemester.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.cboSemester.Location = new System.Drawing.Point(679, 88);
-            this.cboSemester.Name = "cboSemester";
-            this.cboSemester.Size = new System.Drawing.Size(157, 36);
-            this.cboSemester.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.cboSemester.TabIndex = 5;
-            // 
             // frmSubject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -522,8 +488,8 @@
             this.guna2Panel3.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.contextMenuStrip.ResumeLayout(false);
             this.guna2ContextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -544,7 +510,6 @@
         private System.Windows.Forms.ToolStripButton tsbPrint;
         private System.Windows.Forms.ToolStripButton tsbExcel;
         private System.Windows.Forms.DataGridView dgvSubject;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem btnDelete;
         private Guna.UI2.WinForms.Guna2TextBox txtSubjectName;
