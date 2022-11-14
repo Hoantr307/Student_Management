@@ -61,11 +61,6 @@
             this.tsbImport = new System.Windows.Forms.ToolStripButton();
             this.txtFileName = new System.Windows.Forms.ToolStripTextBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
@@ -456,81 +451,9 @@
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.DragStartTransparencyValue = 1D;
-            this.guna2DragControl1.TargetControl = this.guna2Panel1;
             this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BackgroundImage = global::Student_Management.Properties.Resources.images;
-            this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.guna2ControlBox2);
-            this.guna2Panel1.Controls.Add(this.btnExit);
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox3);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1174, 64);
-            this.guna2Panel1.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(75, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 31);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "QUẢN LÝ MÔN HỌC";
-            // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.BorderRadius = 5;
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(145)))), ((int)(((byte)(118)))));
-            this.guna2ControlBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ControlBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1051, 11);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(55, 46);
-            this.guna2ControlBox2.TabIndex = 3;
-            this.guna2ControlBox2.UseTransparentBackground = true;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.BorderColor = System.Drawing.Color.Transparent;
-            this.btnExit.BorderRadius = 5;
-            this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(145)))), ((int)(((byte)(118)))));
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnExit.IconColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(1112, 10);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(55, 46);
-            this.btnExit.TabIndex = 3;
-            this.btnExit.UseTransparentBackground = true;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = global::Student_Management.Properties.Resources.logo_wide2;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(3, 2);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(65, 53);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox3.TabIndex = 1;
-            this.guna2PictureBox3.TabStop = false;
+           
+            
             // 
             // contextMenuStrip
             // 
