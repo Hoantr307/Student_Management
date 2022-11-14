@@ -169,8 +169,16 @@ namespace Student_Management
 
 
                         DataTable data = ds.Tables[0];
-                        dgvTeacher.Columns.Clear();
-                        dgvTeacher.DataSource = data;
+                        if (dgvTeacher.ColumnCount == data.Columns.Count)
+                        {
+                            dgvTeacher.Columns.Clear();
+                            dgvTeacher.DataSource = data;
+                            txtFilePath.Text = ofd.FileName;
+                        }
+                        else
+                        {
+                            MessageBox.Show("File Excel Bạn Vừa Chọn Không Chứa Được Trong Bảng");
+                        }
 
                         reader.Close();
 
