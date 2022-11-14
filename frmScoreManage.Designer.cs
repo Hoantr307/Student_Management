@@ -34,13 +34,6 @@
             this.cboSubject = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cboClasses = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtStudentName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtScorePractice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtScoreAvg = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtStudent = new Guna.UI2.WinForms.Guna2TextBox();
