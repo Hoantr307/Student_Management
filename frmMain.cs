@@ -120,5 +120,48 @@ namespace Student_Management
             frmSubject f = new frmSubject();
             f.ShowDialog();
         }
+
+
+        private void tsbStudent_Click(object sender, EventArgs e)
+        {
+            bool isExists = false;
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmStudent")
+                {
+                    f.Activate();
+                    isExists = true;
+                    break;
+                }
+            }
+            if (!isExists)
+            {
+                frmStudent f = new frmStudent();
+                f.MdiParent = this;
+                f.Dock = DockStyle.Fill;
+                f.Show();
+            }
+        }
+
+        private void tsbClass_Click(object sender, EventArgs e)
+        {
+            bool isExists = false;
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmClass")
+                {
+                    f.Activate();
+                    isExists = true;
+                    break;
+                }
+            }
+            if (!isExists)
+            {
+                frmClass f = new frmClass();
+                f.MdiParent = this;
+                f.Dock = DockStyle.Fill;
+                f.Show();
+            }
+        }
     }
 }

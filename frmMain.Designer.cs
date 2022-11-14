@@ -44,11 +44,11 @@
             this.lbDisplayName = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbHome = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.tsbStudent = new System.Windows.Forms.ToolStripButton();
             this.tsbTeacher = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.tsbClass = new System.Windows.Forms.ToolStripButton();
             this.tsbSubject = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.tsbResult = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsiProfile = new System.Windows.Forms.ToolStripMenuItem();
@@ -226,11 +226,11 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbHome,
-            this.toolStripButton2,
+            this.tsbStudent,
             this.tsbTeacher,
-            this.toolStripButton4,
+            this.tsbClass,
             this.tsbSubject,
-            this.toolStripButton6});
+            this.tsbResult});
             this.toolStrip1.Location = new System.Drawing.Point(0, 92);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1500, 60);
@@ -247,15 +247,16 @@
             this.tsbHome.Text = "TRANG CHỦ";
             this.tsbHome.Click += new System.EventHandler(this.tsbHome_Click);
             // 
-            // toolStripButton2
+            // tsbStudent
             // 
-            this.toolStripButton2.Image = global::Student_Management.Properties.Resources._9023992_student_fill_icon;
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.toolStripButton2.Size = new System.Drawing.Size(125, 57);
-            this.toolStripButton2.Text = "SINH VIÊN";
+            this.tsbStudent.Image = global::Student_Management.Properties.Resources._9023992_student_fill_icon;
+            this.tsbStudent.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbStudent.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbStudent.Name = "tsbStudent";
+            this.tsbStudent.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.tsbStudent.Size = new System.Drawing.Size(125, 57);
+            this.tsbStudent.Text = "SINH VIÊN";
+            this.tsbStudent.Click += new System.EventHandler(this.tsbStudent_Click);
             // 
             // tsbTeacher
             // 
@@ -267,15 +268,16 @@
             this.tsbTeacher.Text = "GIẢNG VIÊN";
             this.tsbTeacher.Click += new System.EventHandler(this.tsbTeacher_Click);
             // 
-            // toolStripButton4
+            // tsbClass
             // 
-            this.toolStripButton4.Image = global::Student_Management.Properties.Resources._8468585_background_school_chalkboard_billboard_chalk_icon;
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.toolStripButton4.Size = new System.Drawing.Size(116, 57);
-            this.toolStripButton4.Text = "LỚP HỌC";
+            this.tsbClass.Image = global::Student_Management.Properties.Resources._8468585_background_school_chalkboard_billboard_chalk_icon;
+            this.tsbClass.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbClass.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbClass.Name = "tsbClass";
+            this.tsbClass.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.tsbClass.Size = new System.Drawing.Size(116, 57);
+            this.tsbClass.Text = "LỚP HỌC";
+            this.tsbClass.Click += new System.EventHandler(this.tsbClass_Click);
             // 
             // tsbSubject
             // 
@@ -288,15 +290,15 @@
             this.tsbSubject.Text = "MÔN HỌC";
             this.tsbSubject.Click += new System.EventHandler(this.tsbSubject_Click);
             // 
-            // toolStripButton6
+            // tsbResult
             // 
-            this.toolStripButton6.Image = global::Student_Management.Properties.Resources._1519780_colorful_document_office_paper_school_icon;
-            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.toolStripButton6.Size = new System.Drawing.Size(165, 57);
-            this.toolStripButton6.Text = "ĐIỂM SINH VIÊN";
+            this.tsbResult.Image = global::Student_Management.Properties.Resources._1519780_colorful_document_office_paper_school_icon;
+            this.tsbResult.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbResult.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbResult.Name = "tsbResult";
+            this.tsbResult.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.tsbResult.Size = new System.Drawing.Size(165, 57);
+            this.tsbResult.Text = "ĐIỂM SINH VIÊN";
             // 
             // menuStrip1
             // 
@@ -358,7 +360,7 @@
             // mônHọcToolStripMenuItem
             // 
             this.mônHọcToolStripMenuItem.Name = "mônHọcToolStripMenuItem";
-            this.mônHọcToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.mônHọcToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.mônHọcToolStripMenuItem.Text = "Môn Học";
             this.mônHọcToolStripMenuItem.Click += new System.EventHandler(this.mônHọcToolStripMenuItem_Click);
             // 
@@ -387,7 +389,7 @@
             // giảngViênToolStripMenuItem
             // 
             this.giảngViênToolStripMenuItem.Name = "giảngViênToolStripMenuItem";
-            this.giảngViênToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.giảngViênToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.giảngViênToolStripMenuItem.Text = "Giảng Viên";
             this.giảngViênToolStripMenuItem.Click += new System.EventHandler(this.giảngViênToolStripMenuItem_Click);
             // 
@@ -485,7 +487,7 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbHome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton tsbStudent;
         private System.Windows.Forms.ToolStripMenuItem hệThốngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsiProfile;
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
@@ -505,9 +507,9 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripButton tsbTeacher;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton tsbClass;
         private System.Windows.Forms.ToolStripButton tsbSubject;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton tsbResult;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel lbDisplayName;
     }

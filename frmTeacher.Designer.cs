@@ -386,7 +386,7 @@
             // tsbAdd
             // 
             this.tsbAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbAdd.Image = global::Student_Management.Properties.Resources._9023992_student_fill_icon;
+            this.tsbAdd.Image = global::Student_Management.Properties.Resources._216490_add_user_icon;
             this.tsbAdd.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAdd.Name = "tsbAdd";
@@ -397,7 +397,7 @@
             // tsbEdit
             // 
             this.tsbEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbEdit.Image = ((System.Drawing.Image)(resources.GetObject("tsbEdit.Image")));
+            this.tsbEdit.Image = global::Student_Management.Properties.Resources._103514_edit_text_document_icon;
             this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEdit.Name = "tsbEdit";
             this.tsbEdit.Size = new System.Drawing.Size(29, 52);
@@ -408,7 +408,7 @@
             // 
             this.tsbSearch.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.tsbSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbSearch.Image = global::Student_Management.Properties.Resources._216242_home_icon__1_;
+            this.tsbSearch.Image = global::Student_Management.Properties.Resources._9004762_search_find_zoom_magnifier_icon;
             this.tsbSearch.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSearch.Name = "tsbSearch";
@@ -430,7 +430,7 @@
             // tsbExcel
             // 
             this.tsbExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbExcel.Image = ((System.Drawing.Image)(resources.GetObject("tsbExcel.Image")));
+            this.tsbExcel.Image = global::Student_Management.Properties.Resources.excel;
             this.tsbExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbExcel.Name = "tsbExcel";
             this.tsbExcel.Size = new System.Drawing.Size(29, 52);
@@ -451,7 +451,7 @@
             // tsbImport
             // 
             this.tsbImport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbImport.Image = ((System.Drawing.Image)(resources.GetObject("tsbImport.Image")));
+            this.tsbImport.Image = global::Student_Management.Properties.Resources._7148704_import_download_icon;
             this.tsbImport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbImport.Name = "tsbImport";
             this.tsbImport.Size = new System.Drawing.Size(29, 52);
