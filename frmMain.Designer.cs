@@ -299,6 +299,7 @@
             this.tsbResult.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.tsbResult.Size = new System.Drawing.Size(165, 57);
             this.tsbResult.Text = "ĐIỂM SINH VIÊN";
+            this.tsbResult.Click += new System.EventHandler(this.tsbResult_Click);
             // 
             // menuStrip1
             // 
@@ -451,6 +452,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.guna2Panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;

@@ -163,5 +163,26 @@ namespace Student_Management
                 f.Show();
             }
         }
+
+        private void tsbResult_Click(object sender, EventArgs e)
+        {
+            bool isExists = false;
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmScoreManage")
+                {
+                    f.Activate();
+                    isExists = true;
+                    break;
+                }
+            }
+            if (!isExists)
+            {
+                frmScoreManage f = new frmScoreManage();
+                f.MdiParent = this;
+                f.Dock = DockStyle.Fill;
+                f.Show();
+            }
+        }
     }
 }
