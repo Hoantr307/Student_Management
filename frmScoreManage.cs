@@ -23,14 +23,14 @@ namespace Student_Management
         private void frmTeacher_Load(object sender, EventArgs e)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("select * from teacher");
-            dgvStudents.DataSource = data;
+            dgvScores.DataSource = data;
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                string Query = $"insert Teacher values('{txtTeacherID.Text}', N'{txtTeacherName.Text}', N'{cboGender.Text}', '{txtPhone.Text}', '{txtEmail.Text}', N'{cboLevel.Text}')";
+                string Query = $"insert Teacher values('{txtStudent.Text}', N'{txtStudentName.Text}', N'{cboClasses.Text}', '{txtPhone.Text}', '{txtScoreAvg.Text}', N'{cboSubject.Text}')";
                 DataProvider.Instance.ExecuteQuery(Query);
                 frmTeacher_Load(sender, e);
             }
@@ -43,7 +43,7 @@ namespace Student_Management
 
         private void tsbEdit_Click(object sender, EventArgs e)
         {
-            string query = $"update Teacher set TeacherName = N'{txtTeacherName.Text}', Gender = N'{cboGender.Text}', Phone = '{txtPhone.Text}', Email = '{txtEmail.Text}', TeacherType = N'{cboLevel.Text}' where TeacherID = '{txtTeacherID.Text}'";
+            string query = $"update Teacher set TeacherName = N'{txtStudentName.Text}', Gender = N'{cboClasses.Text}', Phone = '{txtPhone.Text}', Email = '{txtScoreAvg.Text}', TeacherType = N'{cboSubject.Text}' where TeacherID = '{txtStudent.Text}'";
             DataProvider.Instance.ExecuteQuery(query);
             frmTeacher_Load(sender, e);
         }
@@ -52,32 +52,32 @@ namespace Student_Management
 
         private void dgvTeacher_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtTeacherID.Text = dgvStudents.CurrentRow.Cells[0].Value.ToString();
-            txtTeacherName.Text = dgvStudents.CurrentRow.Cells[1].Value.ToString();
-            cboGender.Text = dgvStudents.CurrentRow.Cells[2].Value.ToString();
-            txtPhone.Text = dgvStudents.CurrentRow.Cells[3].Value.ToString();
-            txtEmail.Text = dgvStudents.CurrentRow.Cells[4].Value.ToString();
-            cboLevel.Text = dgvStudents.CurrentRow.Cells[5].Value.ToString();
+            txtStudent.Text = dgvScores.CurrentRow.Cells[0].Value.ToString();
+            txtStudentName.Text = dgvScores.CurrentRow.Cells[1].Value.ToString();
+            cboClasses.Text = dgvScores.CurrentRow.Cells[2].Value.ToString();
+            txtPhone.Text = dgvScores.CurrentRow.Cells[3].Value.ToString();
+            txtScoreAvg.Text = dgvScores.CurrentRow.Cells[4].Value.ToString();
+            cboSubject.Text = dgvScores.CurrentRow.Cells[5].Value.ToString();
 
-            dgvStudents.CurrentRow.ContextMenuStrip = contextMenuStrip;
+            dgvScores.CurrentRow.ContextMenuStrip = contextMenuStrip;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string query = $"delete student where StudentID = '{txtTeacherID.Text}'";
+            string query = $"delete student where StudentID = '{txtStudent.Text}'";
             DataProvider.Instance.ExecuteQuery(query);
-            txtTeacherID.Text = "";
-            txtTeacherName.Text = "";
-            cboGender.Text = "";
+            txtStudent.Text = "";
+            txtStudentName.Text = "";
+            cboClasses.Text = "";
             txtPhone.Text = "";
-            txtEmail.Text = "";
-            cboLevel.Text = "";
+            txtScoreAvg.Text = "";
+            cboSubject.Text = "";
             frmTeacher_Load(sender, e);
         }
 
         private void tsbSearch_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dgvStudents.Rows)
+            foreach (DataGridViewRow row in dgvScores.Rows)
             {
                 if (row.Cells[0].Value.ToString().Contains(txtKeyword.Text))
                 {
@@ -112,26 +112,26 @@ namespace Student_Management
 
         private void tsbExcel_Click(object sender, EventArgs e)
         {
-            if (dgvStudents.Rows.Count > 0)
+            if (dgvScores.Rows.Count > 0)
             {
                 Microsoft.Office.Interop.Excel.Application XcelApp = new Microsoft.Office.Interop.Excel.Application();
                 XcelApp.Application.Workbooks.Add(Type.Missing);
                 XcelApp.Cells[1, 4] = "Danh Sách Giảng Viên";
-                for (int i = 1; i < dgvStudents.Columns.Count + 1; i++)
+                for (int i = 1; i < dgvScores.Columns.Count + 1; i++)
                 {
-                    XcelApp.Cells[2, i] = dgvStudents.Columns[i - 1].HeaderText;
+                    XcelApp.Cells[2, i] = dgvScores.Columns[i - 1].HeaderText;
                 }
-                for (int i = 0; i < dgvStudents.Rows.Count; i++)
+                for (int i = 0; i < dgvScores.Rows.Count; i++)
                 {
 
-                    for (int j = 0; j < dgvStudents.Columns.Count; j++)
+                    for (int j = 0; j < dgvScores.Columns.Count; j++)
                     {
-                        XcelApp.Cells[i + 3, j + 1] = dgvStudents.Rows[i].Cells[j].Value.ToString();
+                        XcelApp.Cells[i + 3, j + 1] = dgvScores.Rows[i].Cells[j].Value.ToString();
                     }
                 }
 
-                XcelApp.Cells[dgvStudents.Rows.Count + 4, 1] = "Người Lập danh sách";
-                XcelApp.Cells[dgvStudents.Rows.Count + 4, 5] = "Ký và Ghi rõ họ tên";
+                XcelApp.Cells[dgvScores.Rows.Count + 4, 1] = "Người Lập danh sách";
+                XcelApp.Cells[dgvScores.Rows.Count + 4, 5] = "Ký và Ghi rõ họ tên";
                 XcelApp.Columns.AutoFit();
                 XcelApp.Visible = true;
             }
