@@ -100,6 +100,7 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BackgroundImage = global::Student_Management.Properties.Resources.images;
+            this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.guna2ControlBox2);
             this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
@@ -231,7 +232,7 @@
             this.tsbClass,
             this.tsbSubject,
             this.tsbResult});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 92);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 94);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1500, 60);
             this.toolStrip1.TabIndex = 1;
@@ -314,7 +315,7 @@
             this.trợGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 64);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1500, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1500, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
