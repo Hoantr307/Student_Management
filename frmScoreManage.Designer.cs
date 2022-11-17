@@ -52,6 +52,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvScores = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbAdd = new System.Windows.Forms.ToolStripButton();
@@ -64,16 +74,6 @@
             this.txtFilePath = new System.Windows.Forms.ToolStripTextBox();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScores)).BeginInit();
@@ -164,9 +164,6 @@
             this.cboClasses.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboClasses.ForeColor = System.Drawing.Color.Black;
             this.cboClasses.ItemHeight = 30;
-            this.cboClasses.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
             this.cboClasses.Location = new System.Drawing.Point(176, 141);
             this.cboClasses.Name = "cboClasses";
             this.cboClasses.Size = new System.Drawing.Size(237, 36);
@@ -206,7 +203,7 @@
             this.txtScoreElement.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtScoreElement.ForeColor = System.Drawing.Color.Black;
             this.txtScoreElement.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtScoreElement.Location = new System.Drawing.Point(696, 88);
+            this.txtScoreElement.Location = new System.Drawing.Point(696, 83);
             this.txtScoreElement.Name = "txtScoreElement";
             this.txtScoreElement.PasswordChar = '\0';
             this.txtScoreElement.PlaceholderText = "";
@@ -250,7 +247,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(543, 202);
+            this.label8.Location = new System.Drawing.Point(543, 200);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 20);
             this.label8.TabIndex = 1;
@@ -260,7 +257,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(543, 150);
+            this.label5.Location = new System.Drawing.Point(543, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 20);
             this.label5.TabIndex = 1;
@@ -379,6 +376,7 @@
             this.txtStudentID.Size = new System.Drawing.Size(237, 41);
             this.txtStudentID.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtStudentID.TabIndex = 4;
+            this.txtStudentID.Leave += new System.EventHandler(this.txtStudentID_Leave);
             // 
             // label7
             // 
@@ -457,6 +455,86 @@
             this.dgvScores.Size = new System.Drawing.Size(1160, 331);
             this.dgvScores.TabIndex = 0;
             this.dgvScores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvScores_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "StudentID";
+            this.Column1.HeaderText = "Mã Sinh Viên";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "StudentName";
+            this.Column2.HeaderText = "Họ Tên";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "ClassID";
+            this.Column3.HeaderText = "Lớp";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "SubjectID";
+            this.Column4.HeaderText = "Môn Học";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "ScoreAvg";
+            this.Column5.HeaderText = "Điểm Trung Bình";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "ScoreElement";
+            this.Column10.HeaderText = "Điểm Thành Phần";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "ScorePractice";
+            this.Column6.HeaderText = "Điểm Thực Hành";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "ScoreFinal";
+            this.Column7.HeaderText = "Điểm Tổng Kết";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Conduct";
+            this.Column8.HeaderText = "Hạnh Kiểm";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 125;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "Description";
+            this.Column9.HeaderText = "Mô Tả";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 125;
             // 
             // guna2Panel3
             // 
@@ -591,86 +669,6 @@
             this.btnDelete.Text = "Xóa Giảng Viên";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "StudentID";
-            this.Column1.HeaderText = "Mã Sinh Viên";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "StudentName";
-            this.Column2.HeaderText = "Họ Tên";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "ClassID";
-            this.Column3.HeaderText = "Lớp";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "SubjectID";
-            this.Column4.HeaderText = "Môn Học";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "ScoreAvg";
-            this.Column5.HeaderText = "Điểm Trung Bình";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "ScoreElement";
-            this.Column10.HeaderText = "Điểm Thành Phần";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "ScorePractice";
-            this.Column6.HeaderText = "Điểm Thực Hành";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "ScoreFinal";
-            this.Column7.HeaderText = "Điểm Tổng Kết";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Conduct";
-            this.Column8.HeaderText = "Hạnh Kiểm";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 125;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "Description";
-            this.Column9.HeaderText = "Mô Tả";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 125;
-            // 
             // frmScoreManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -679,7 +677,7 @@
             this.Controls.Add(this.guna2Panel3);
             this.Name = "frmScoreManage";
             this.Text = "Quản Lý Điểm";
-            this.Load += new System.EventHandler(this.frmTeacher_Load);
+            this.Load += new System.EventHandler(this.frmScoreManage_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

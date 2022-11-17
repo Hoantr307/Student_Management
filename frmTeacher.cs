@@ -56,7 +56,7 @@ namespace Student_Management
         {
             txtTeacherID.Text = dgvTeacher.CurrentRow.Cells[0].Value.ToString();
             txtTeacherName.Text = dgvTeacher.CurrentRow.Cells[1].Value.ToString();
-            cboGender.Text = dgvTeacher.CurrentRow.Cells[2].Value.ToString();
+            cboGender.Text = dgvTeacher.CurrentRow.Cells[2].Value.ToString() == "Nam" ? "Nam" : "Nữ";
             txtPhone.Text = dgvTeacher.CurrentRow.Cells[3].Value.ToString();
             txtEmail.Text = dgvTeacher.CurrentRow.Cells[4].Value.ToString();
             cboLevel.Text = dgvTeacher.CurrentRow.Cells[5].Value.ToString();

@@ -36,7 +36,7 @@ namespace Student_Management
         {
             try
             {
-                string Query = $"insert Student values('{txtStudentID.Text}', N'{txtStudentName.Text}', '{txtBirth.Text}',N'{cboGender.Text}', '{txtAddress.Text}', N'{cboClassID.Text}')";
+                string Query = $"insert Student values('{txtStudentID.Text}', N'{txtStudentName.Text}', '{txtBirth.Text}',N'{cboGender.Text}', '{txtAddress.Text}', '{cboClassID.SelectedValue}')";
                 DataProvider.Instance.ExecuteQuery(Query);
                 frmStudent_Load(sender, e);
             }
@@ -50,7 +50,7 @@ namespace Student_Management
         private void tsbEdit_Click(object sender, EventArgs e)
         {
             string query = $"update Student set " +
-                $"StudentName = N'{txtStudentName.Text}', Birthday = '{txtBirth.Text}', Gender = N'{cboGender.Text}', Address = N'{txtAddress.Text}', ClassID = {cboClassID.Text} where StudentID = {txtStudentID.Text}";
+                $"StudentName = N'{txtStudentName.Text}', Birthday = '{txtBirth.Text}', Gender = N'{cboGender.Text}', Address = N'{txtAddress.Text}', ClassID = {cboClassID.SelectedValue} where StudentID = {txtStudentID.Text}";
             DataProvider.Instance.ExecuteQuery(query);
             frmStudent_Load(sender, e);
         }
@@ -62,7 +62,7 @@ namespace Student_Management
             txtStudentID.Text = dgvStudent.CurrentRow.Cells[0].Value.ToString();
             txtStudentName.Text = dgvStudent.CurrentRow.Cells[1].Value.ToString();
             txtBirth.Text = dgvStudent.CurrentRow.Cells[2].Value.ToString();
-            cboGender.Text = dgvStudent.CurrentRow.Cells[3].Value.ToString();
+            cboGender.Text = dgvStudent.CurrentRow.Cells[3].Value.ToString() == "Nam" ? "Nam" : "Nữ";
             txtAddress.Text = dgvStudent.CurrentRow.Cells[4].Value.ToString();
             cboClassID.Text = dgvStudent.CurrentRow.Cells[5].Value.ToString();
 

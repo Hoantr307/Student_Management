@@ -142,7 +142,7 @@
             "Nữ"});
             this.cboGender.Location = new System.Drawing.Point(243, 130);
             this.cboGender.Name = "cboGender";
-            this.cboGender.Size = new System.Drawing.Size(112, 36);
+            this.cboGender.Size = new System.Drawing.Size(144, 36);
             this.cboGender.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.cboGender.TabIndex = 5;
             // 

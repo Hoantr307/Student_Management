@@ -22,28 +22,16 @@ namespace Student_Management
             txtKeyword.ForeColor = Color.Gray;
         }
 
-        private void frmTeacher_Load(object sender, EventArgs e)
-        {
-            DataTable data = DataProvider.Instance.ExecuteQuery("select * from Result");
-            dgvScores.DataSource = data;
-            DataTable dt = DataProvider.Instance.ExecuteQuery("select * from Class");
-            cboClasses.DataSource = dt;
-            cboClasses.DisplayMember = "ClassName";
-            cboClasses.ValueMember = "ClassID";
-            DataTable dt1 = DataProvider.Instance.ExecuteQuery("select * from Subject");
-            cboSubject.DataSource = dt1;
-            cboSubject.DisplayMember = "SubjectName";
-            cboSubject.ValueMember = "SubjectID";
-        }
+        
 
         private void tsbAdd_Click(object sender, EventArgs e)
         {
             try
             {
                 string Query = $"insert Result values(" +
-                    $"'{txtStudentID.Text}', N'{txtStudentName.Text}', '{cboClasses.Text}', '{cboSubject.Text}', {txtScoreAvg.Text}, {txtScoreElement.Text}, {txtScorePractice.Text}, {txtScoreFinal.Text}, N'{cboConduct.Text}', N'{txtDescription.Text}')";
+                    $"'{txtStudentID.Text}', N'{txtStudentName.Text}', '{cboClasses.SelectedValue}', '{cboSubject.SelectedValue}', {txtScoreAvg.Text}, {txtScoreElement.Text}, {txtScorePractice.Text}, {txtScoreFinal.Text}, N'{cboConduct.Text}', N'{txtDescription.Text}')";
                 DataProvider.Instance.ExecuteQuery(Query);
-                frmTeacher_Load(sender, e);
+                frmScoreManage_Load(sender, e);
             }
             catch (Exception)
             {
@@ -55,35 +43,29 @@ namespace Student_Management
         private void tsbEdit_Click(object sender, EventArgs e)
         {
             string query = $"update ";
-            DataProvider.Instance.ExecuteQuery(query);
-            frmTeacher_Load(sender, e);
+            //DataProvider.Instance.ExecuteQuery(query);
+            frmScoreManage_Load(sender, e);
         }
 
 
 
-        private void dgvTeacher_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtStudentID.Text = dgvScores.CurrentRow.Cells[0].Value.ToString();
-            txtStudentName.Text = dgvScores.CurrentRow.Cells[1].Value.ToString();
-            cboClasses.Text = dgvScores.CurrentRow.Cells[2].Value.ToString();
-            cboClasses.Text = dgvScores.CurrentRow.Cells[3].Value.ToString();
-            txtScoreAvg.Text = dgvScores.CurrentRow.Cells[4].Value.ToString();
-            cboSubject.Text = dgvScores.CurrentRow.Cells[5].Value.ToString();
-
-            dgvScores.CurrentRow.ContextMenuStrip = contextMenuStrip;
-        }
-
+        
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string query = $"delete student where StudentID = '{txtStudentID.Text}'";
-            DataProvider.Instance.ExecuteQuery(query);
+            string query = $"delete ";
+            //DataProvider.Instance.ExecuteQuery(query);
             txtStudentID.Text = "";
             txtStudentName.Text = "";
-            cboClasses.Text = "";
-            cboClasses.Text = "";
+            cboClasses.SelectedIndex = -1;
+            cboSubject.SelectedIndex = -1;
             txtScoreAvg.Text = "";
-            cboSubject.Text = "";
-            frmTeacher_Load(sender, e);
+            txtScoreElement.Text = "";
+            txtScorePractice.Text = "";
+            txtScoreFinal.Text = "";
+            cboConduct.SelectedIndex = -1;
+            txtDescription.Text = "";
+            
+            frmScoreManage_Load(sender, e);
         }
 
         private void tsbSearch_Click(object sender, EventArgs e)
@@ -207,6 +189,29 @@ namespace Student_Management
             txtDescription.Text = dgvScores.CurrentRow.Cells[9].Value.ToString();
 
             dgvScores.CurrentRow.ContextMenuStrip = contextMenuStrip;
+        }
+
+        private void txtStudentID_Leave(object sender, EventArgs e)
+        {
+            DataTable dt = DataProvider.Instance.ExecuteQuery("select StudentName from Student where StudentID = " + txtStudentID.Text);
+            foreach (DataRow item in dt.Rows)
+            {
+                txtStudentName.Text = item["StudentName"].ToString();
+            }
+        }
+
+        private void frmScoreManage_Load(object sender, EventArgs e)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from Result");
+            dgvScores.DataSource = data;
+            DataTable dt = DataProvider.Instance.ExecuteQuery("select * from Class");
+            cboClasses.DataSource = dt;
+            cboClasses.DisplayMember = "ClassName";
+            cboClasses.ValueMember = "ClassID";
+            DataTable dt1 = DataProvider.Instance.ExecuteQuery("select * from Subject");
+            cboSubject.DataSource = dt1;
+            cboSubject.DisplayMember = "SubjectName";
+            cboSubject.ValueMember = "SubjectID";
         }
     }
 }

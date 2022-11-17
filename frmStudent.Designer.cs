@@ -99,7 +99,7 @@
             // txtBirth
             // 
             this.txtBirth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBirth.Location = new System.Drawing.Point(243, 125);
+            this.txtBirth.Location = new System.Drawing.Point(243, 127);
             this.txtBirth.Name = "txtBirth";
             this.txtBirth.Size = new System.Drawing.Size(237, 34);
             this.txtBirth.TabIndex = 6;
@@ -133,9 +133,9 @@
             this.cboGender.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cboGender.Location = new System.Drawing.Point(683, 35);
+            this.cboGender.Location = new System.Drawing.Point(683, 30);
             this.cboGender.Name = "cboGender";
-            this.cboGender.Size = new System.Drawing.Size(112, 36);
+            this.cboGender.Size = new System.Drawing.Size(143, 36);
             this.cboGender.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.cboGender.TabIndex = 5;
             // 
