@@ -57,7 +57,7 @@ create table Subject
 	Semester int
 )
 go
-
+drop table Result
 create table Result
 (
 	StudentID int foreign key references Student(StudentID) on delete cascade on update cascade,
@@ -106,3 +106,10 @@ begin
 end
 go
 
+
+create proc GetResult
+as
+begin 
+	select StudentID, StudentName, ClassID, SubjectID, ScoreAvg, ScoreElement, ScorePractice, ScoreFinal, Conduct, Description from Result
+end
+go
