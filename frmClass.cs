@@ -49,14 +49,24 @@ namespace Student_Management
         {
             string Query = $"Update Class Set ClassName =  N'{txtClassName.Text}' where ClassID = {txtClassID.Text}";
             DataProvider.Instance.ExecuteQuery(Query);
+
             frmClass_Load(sender, e);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string Query = $"delete Class where ClassID = {txtClassID.Text}";
-            DataProvider.Instance.ExecuteQuery(Query);
-            frmClass_Load(sender, e);
+            try
+            {
+                string Query = $"delete Class where ClassID = {txtClassID.Text}";
+                DataProvider.Instance.ExecuteQuery(Query);
+                frmClass_Load(sender, e);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Bạn chưa thể xóa lớp này!");
+            }
+            
         }
     }
 }
