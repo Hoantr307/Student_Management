@@ -1,6 +1,6 @@
 ﻿namespace Student_Management
 {
-    partial class frmReportStudent
+    partial class frmReportClass
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,32 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.crvClass = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.crvStudent = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // crvClass
+            // 
+            this.crvClass.ActiveViewIndex = -1;
+            this.crvClass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.crvClass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvClass.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crvClass.Location = new System.Drawing.Point(0, 42);
+            this.crvClass.Name = "crvClass";
+            this.crvClass.ShowCloseButton = false;
+            this.crvClass.ShowLogo = false;
+            this.crvClass.Size = new System.Drawing.Size(902, 500);
+            this.crvClass.TabIndex = 0;
+            this.crvClass.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // guna2Panel1
             // 
@@ -48,8 +64,9 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(800, 44);
-            this.guna2Panel1.TabIndex = 22;
+            this.guna2Panel1.Size = new System.Drawing.Size(902, 44);
+            this.guna2Panel1.TabIndex = 21;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // guna2PictureBox2
             // 
@@ -68,22 +85,11 @@
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(741, 7);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(843, 7);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 30);
             this.guna2ControlBox1.TabIndex = 18;
-            // 
-            // crvStudent
-            // 
-            this.crvStudent.ActiveViewIndex = -1;
-            this.crvStudent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crvStudent.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crvStudent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crvStudent.Location = new System.Drawing.Point(0, 44);
-            this.crvStudent.Name = "crvStudent";
-            this.crvStudent.Size = new System.Drawing.Size(800, 406);
-            this.crvStudent.TabIndex = 23;
             // 
             // guna2DragControl1
             // 
@@ -106,18 +112,20 @@
             this.guna2BorderlessForm1.DragStartTransparencyValue = 1D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // frmReportStudent
+            // frmReportClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.crvStudent);
+            this.ClientSize = new System.Drawing.Size(902, 542);
             this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.crvClass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmReportStudent";
-            this.Text = "frmReportStudent";
+            this.MinimumSize = new System.Drawing.Size(902, 542);
+            this.Name = "frmReportClass";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "frmReportTeacher";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmReportStudent_Load);
+            this.Load += new System.EventHandler(this.frmReportClass_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -126,10 +134,10 @@
 
         #endregion
 
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvClass;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvStudent;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;

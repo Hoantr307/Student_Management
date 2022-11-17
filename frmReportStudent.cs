@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Student_Management.DAO;
+using Student_Management.Report;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,15 @@ namespace Student_Management
         public frmReportStudent()
         {
             InitializeComponent();
+        }
+
+        private void frmReportStudent_Load(object sender, EventArgs e)
+        {
+            reportStudent rpt = new reportStudent();
+            DataTable dt = DataProvider.Instance.ExecuteQuery("Select * from Student");
+            rpt.SetDataSource(dt);
+            crvStudent.ReportSource = rpt;
+            crvStudent.RefreshReport();
         }
     }
 }
