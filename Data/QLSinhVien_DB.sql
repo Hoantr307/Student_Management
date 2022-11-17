@@ -3,6 +3,7 @@ go
 use QLSinhVien
 go
 
+
 create table Account
 (
 	UserName varchar(50) primary key,
@@ -25,9 +26,9 @@ create table Student
 	ClassID int 
 )
 go
-select * FROM Class
+
 alter table Student 
-add constraint FK_S_ClassID foreign key (ClassID) references Class(ClassID)
+add constraint FK_S_ClassID foreign key (ClassID) references Class(ClassID) on delete cascade on update cascade
 
 
 create table Class
@@ -52,14 +53,14 @@ create table Subject
 	SubjectID varchar(10) primary key,
 	SubjectName Nvarchar(100),
 	LessonNumber int,
-	TeacherID int foreign key references Teacher(TeacherID) on delete cascade,
+	TeacherID int foreign key references Teacher(TeacherID) on delete cascade on update cascade,
 	Semester int
 )
 go
 
 create table Result
 (
-	StudentID int foreign key references Student(StudentID) on delete cascade,
+	StudentID int foreign key references Student(StudentID) on delete cascade on update cascade,
 	StudentName Nvarchar(100) ,
 	ClassID int ,
 	SubjectID varchar(10),
@@ -72,9 +73,9 @@ create table Result
 
 	constraint pk_st_cl_sj primary key(StudentID, SubjectID)
 )
-alter table Result add constraint FK_Rs_Subject foreign key (SubjectID) references Subject(SubjectID)
+alter table Result add constraint FK_Rs_Subject foreign key (SubjectID) references Subject(SubjectID) on delete cascade on update cascade
 go
-alter table Result add constraint FK_Rs_Class foreign key (ClassID) references Class(ClassID)
+alter table Result add constraint FK_Rs_Class foreign key (ClassID) references Class(ClassID) 
 go
 
 
@@ -104,3 +105,4 @@ begin
 	insert Account values(@userName, @displayName, @passWord, @accountType)
 end
 go
+

@@ -42,8 +42,11 @@ namespace Student_Management
 
         private void tsbEdit_Click(object sender, EventArgs e)
         {
-            string query = $"update ";
-            //DataProvider.Instance.ExecuteQuery(query);
+            string query = $"update Result set ClassID = {cboClasses.SelectedValue}, SubjectID = '{cboSubject.SelectedValue}', " +
+                $"ScoreAvg = {txtScoreAvg.Text}, ScoreElement = {txtScoreElement.Text}, ScorePractice = {txtScorePractice.Text}, " +
+                $"ScoreFinal = {txtScoreFinal.Text}, Conduct = N'{cboConduct.Text}',Description = N'{txtDescription.Text}' " +
+                $"where StudentID = {txtStudentID.Text}";
+            DataProvider.Instance.ExecuteQuery(query);
             frmScoreManage_Load(sender, e);
         }
 
@@ -52,8 +55,8 @@ namespace Student_Management
         
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string query = $"delete ";
-            //DataProvider.Instance.ExecuteQuery(query);
+            string query = $"delete Result where StudentID = {txtStudentID.Text} ";
+            DataProvider.Instance.ExecuteQuery(query);
             txtStudentID.Text = "";
             txtStudentName.Text = "";
             cboClasses.SelectedIndex = -1;
