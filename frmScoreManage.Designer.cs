@@ -641,6 +641,7 @@
             this.tsbImport.Name = "tsbImport";
             this.tsbImport.Size = new System.Drawing.Size(29, 52);
             this.tsbImport.Text = "toolStripButton1";
+            this.tsbImport.Click += new System.EventHandler(this.tsbImport_Click);
             // 
             // txtFilePath
             // 

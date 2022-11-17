@@ -196,7 +196,7 @@ namespace Student_Management
 
         private void txtStudentID_Leave(object sender, EventArgs e)
         {
-            DataTable dt = DataProvider.Instance.ExecuteQuery("select StudentName from Student where StudentID = " + txtStudentID.Text);
+            DataTable dt = DataProvider.Instance.ExecuteQuery("select StudentName, ClassID from Student where StudentID = " + txtStudentID.Text);
             foreach (DataRow item in dt.Rows)
             {
                 txtStudentName.Text = item["StudentName"].ToString();
@@ -205,7 +205,7 @@ namespace Student_Management
 
         private void frmScoreManage_Load(object sender, EventArgs e)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("select * from Result");
+            DataTable data = DataProvider.Instance.ExecuteQuery("GetResult");
             dgvScores.DataSource = data;
             DataTable dt = DataProvider.Instance.ExecuteQuery("select * from Class");
             cboClasses.DataSource = dt;
