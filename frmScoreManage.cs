@@ -103,7 +103,8 @@ namespace Student_Management
 
         private void tsbPrint_Click(object sender, EventArgs e)
         {
-            
+            frmReportScore f = new frmReportScore();
+            f.ShowDialog();
         }
 
         private void tsbExcel_Click(object sender, EventArgs e)
@@ -215,6 +216,11 @@ namespace Student_Management
             cboSubject.DataSource = dt1;
             cboSubject.DisplayMember = "SubjectName";
             cboSubject.ValueMember = "SubjectID";
+        }
+
+        private void rToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmScoreManage_Load(sender, e);
         }
     }
 }

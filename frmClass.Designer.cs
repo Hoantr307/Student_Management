@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtClassName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtClassID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -49,7 +50,6 @@
             this.txtFileName = new System.Windows.Forms.ToolStripTextBox();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtClassName = new Guna.UI2.WinForms.Guna2TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClasses)).BeginInit();
@@ -84,6 +84,27 @@
             this.label5.Size = new System.Drawing.Size(75, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "Tên Lớp:";
+            // 
+            // txtClassName
+            // 
+            this.txtClassName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtClassName.DefaultText = "";
+            this.txtClassName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtClassName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtClassName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtClassName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtClassName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtClassName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClassName.ForeColor = System.Drawing.Color.Black;
+            this.txtClassName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtClassName.Location = new System.Drawing.Point(656, 34);
+            this.txtClassName.Name = "txtClassName";
+            this.txtClassName.PasswordChar = '\0';
+            this.txtClassName.PlaceholderText = "";
+            this.txtClassName.SelectedText = "";
+            this.txtClassName.Size = new System.Drawing.Size(237, 41);
+            this.txtClassName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtClassName.TabIndex = 4;
             // 
             // txtClassID
             // 
@@ -128,7 +149,7 @@
             this.groupBox2.Size = new System.Drawing.Size(1166, 549);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Danh Sách Môn Học";
+            this.groupBox2.Text = "Danh Sách Lớp Học";
             // 
             // dgvClasses
             // 
@@ -236,6 +257,7 @@
             this.tsbPrint.Name = "tsbPrint";
             this.tsbPrint.Size = new System.Drawing.Size(29, 52);
             this.tsbPrint.Text = "toolStripButton5";
+            this.tsbPrint.Click += new System.EventHandler(this.tsbPrint_Click);
             // 
             // tsbExcel
             // 
@@ -279,7 +301,7 @@
             this.btnDelete});
             this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.ShowCheckMargin = true;
-            this.contextMenuStrip.Size = new System.Drawing.Size(249, 72);
+            this.contextMenuStrip.Size = new System.Drawing.Size(215, 44);
             // 
             // btnDelete
             // 
@@ -291,27 +313,6 @@
             this.btnDelete.Size = new System.Drawing.Size(240, 40);
             this.btnDelete.Text = "Xóa Lớp Học";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // txtClassName
-            // 
-            this.txtClassName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtClassName.DefaultText = "";
-            this.txtClassName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtClassName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtClassName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtClassName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtClassName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtClassName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClassName.ForeColor = System.Drawing.Color.Black;
-            this.txtClassName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtClassName.Location = new System.Drawing.Point(656, 34);
-            this.txtClassName.Name = "txtClassName";
-            this.txtClassName.PasswordChar = '\0';
-            this.txtClassName.PlaceholderText = "";
-            this.txtClassName.SelectedText = "";
-            this.txtClassName.Size = new System.Drawing.Size(237, 41);
-            this.txtClassName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtClassName.TabIndex = 4;
             // 
             // frmClass
             // 

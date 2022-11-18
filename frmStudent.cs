@@ -189,8 +189,9 @@ namespace Student_Management
             }
         }
 
-       
-
-       
+        private void rToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmStudent_Load(sender, e);
+        }
     }
 }

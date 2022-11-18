@@ -68,5 +68,11 @@ namespace Student_Management
             }
             
         }
+
+        private void tsbPrint_Click(object sender, EventArgs e)
+        {
+            frmReportClass f = new frmReportClass();
+            f.ShowDialog();
+        }
     }
 }

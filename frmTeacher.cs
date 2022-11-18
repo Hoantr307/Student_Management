@@ -186,5 +186,10 @@ namespace Student_Management
                 }
             }
         }
+
+        private void rToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTeacher_Load(sender, e);
+        }
     }
 }
