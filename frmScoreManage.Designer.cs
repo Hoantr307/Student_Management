@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboConduct = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cboSubject = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cboClasses = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtScoreFinal = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtScoreElement = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtStudentName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -76,6 +74,8 @@
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cboClasses = new System.Windows.Forms.ComboBox();
+            this.cboSubject = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScores)).BeginInit();
@@ -90,18 +90,18 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.cboConduct);
             this.groupBox1.Controls.Add(this.cboSubject);
-            this.groupBox1.Controls.Add(this.cboClasses);
-            this.groupBox1.Controls.Add(this.txtScoreFinal);
             this.groupBox1.Controls.Add(this.txtScoreElement);
+            this.groupBox1.Controls.Add(this.cboClasses);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.cboConduct);
+            this.groupBox1.Controls.Add(this.txtScorePractice);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.txtScoreFinal);
             this.groupBox1.Controls.Add(this.txtStudentName);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtDescription);
-            this.groupBox1.Controls.Add(this.txtScorePractice);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtScoreAvg);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label10);
@@ -121,6 +121,7 @@
             // cboConduct
             // 
             this.cboConduct.BackColor = System.Drawing.Color.Transparent;
+            this.cboConduct.BorderColor = System.Drawing.Color.Gray;
             this.cboConduct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboConduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboConduct.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -135,43 +136,10 @@
             "Trung Bình",
             "Yếu",
             "Kém"});
-            this.cboConduct.Location = new System.Drawing.Point(175, 242);
+            this.cboConduct.Location = new System.Drawing.Point(175, 229);
             this.cboConduct.Name = "cboConduct";
             this.cboConduct.Size = new System.Drawing.Size(237, 36);
-            this.cboConduct.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.cboConduct.TabIndex = 5;
-            // 
-            // cboSubject
-            // 
-            this.cboSubject.BackColor = System.Drawing.Color.Transparent;
-            this.cboSubject.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSubject.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboSubject.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboSubject.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboSubject.ForeColor = System.Drawing.Color.Black;
-            this.cboSubject.ItemHeight = 30;
-            this.cboSubject.Location = new System.Drawing.Point(175, 192);
-            this.cboSubject.Name = "cboSubject";
-            this.cboSubject.Size = new System.Drawing.Size(237, 36);
-            this.cboSubject.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.cboSubject.TabIndex = 5;
-            // 
-            // cboClasses
-            // 
-            this.cboClasses.BackColor = System.Drawing.Color.Transparent;
-            this.cboClasses.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboClasses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboClasses.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboClasses.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboClasses.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboClasses.ForeColor = System.Drawing.Color.Black;
-            this.cboClasses.ItemHeight = 30;
-            this.cboClasses.Location = new System.Drawing.Point(176, 141);
-            this.cboClasses.Name = "cboClasses";
-            this.cboClasses.Size = new System.Drawing.Size(237, 36);
-            this.cboClasses.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.cboClasses.TabIndex = 5;
             // 
             // txtScoreFinal
             // 
@@ -185,7 +153,7 @@
             this.txtScoreFinal.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtScoreFinal.ForeColor = System.Drawing.Color.Black;
             this.txtScoreFinal.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtScoreFinal.Location = new System.Drawing.Point(696, 187);
+            this.txtScoreFinal.Location = new System.Drawing.Point(678, 138);
             this.txtScoreFinal.Name = "txtScoreFinal";
             this.txtScoreFinal.PasswordChar = '\0';
             this.txtScoreFinal.PlaceholderText = "";
@@ -193,6 +161,7 @@
             this.txtScoreFinal.Size = new System.Drawing.Size(237, 41);
             this.txtScoreFinal.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtScoreFinal.TabIndex = 4;
+            this.txtScoreFinal.Enter += new System.EventHandler(this.txtScoreFinal_Enter);
             // 
             // txtScoreElement
             // 
@@ -206,7 +175,7 @@
             this.txtScoreElement.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtScoreElement.ForeColor = System.Drawing.Color.Black;
             this.txtScoreElement.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtScoreElement.Location = new System.Drawing.Point(696, 83);
+            this.txtScoreElement.Location = new System.Drawing.Point(678, 35);
             this.txtScoreElement.Name = "txtScoreElement";
             this.txtScoreElement.PasswordChar = '\0';
             this.txtScoreElement.PlaceholderText = "";
@@ -240,7 +209,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(548, 249);
+            this.label9.Location = new System.Drawing.Point(530, 236);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 20);
             this.label9.TabIndex = 1;
@@ -250,7 +219,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(543, 200);
+            this.label8.Location = new System.Drawing.Point(525, 145);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 20);
             this.label8.TabIndex = 1;
@@ -260,7 +229,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(543, 149);
+            this.label5.Location = new System.Drawing.Point(526, 91);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 20);
             this.label5.TabIndex = 1;
@@ -278,7 +247,7 @@
             this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescription.Location = new System.Drawing.Point(696, 237);
+            this.txtDescription.Location = new System.Drawing.Point(678, 237);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '\0';
             this.txtDescription.PlaceholderText = "";
@@ -299,7 +268,7 @@
             this.txtScorePractice.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtScorePractice.ForeColor = System.Drawing.Color.Black;
             this.txtScorePractice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtScorePractice.Location = new System.Drawing.Point(695, 136);
+            this.txtScorePractice.Location = new System.Drawing.Point(678, 88);
             this.txtScorePractice.Name = "txtScorePractice";
             this.txtScorePractice.PasswordChar = '\0';
             this.txtScorePractice.PlaceholderText = "";
@@ -312,7 +281,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(542, 97);
+            this.label1.Location = new System.Drawing.Point(524, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 20);
             this.label1.TabIndex = 1;
@@ -330,7 +299,7 @@
             this.txtScoreAvg.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtScoreAvg.ForeColor = System.Drawing.Color.Black;
             this.txtScoreAvg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtScoreAvg.Location = new System.Drawing.Point(695, 27);
+            this.txtScoreAvg.Location = new System.Drawing.Point(678, 187);
             this.txtScoreAvg.Name = "txtScoreAvg";
             this.txtScoreAvg.PasswordChar = '\0';
             this.txtScoreAvg.PlaceholderText = "";
@@ -343,17 +312,17 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(543, 36);
+            this.label6.Location = new System.Drawing.Point(527, 192);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 20);
+            this.label6.Size = new System.Drawing.Size(130, 20);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Điểm Trung Bình:";
+            this.label6.Text = "Điểm Kết Thúc :";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(45, 239);
+            this.label10.Location = new System.Drawing.Point(45, 236);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 20);
             this.label10.TabIndex = 1;
@@ -385,7 +354,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(45, 197);
+            this.label7.Location = new System.Drawing.Point(48, 192);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 20);
             this.label7.TabIndex = 1;
@@ -395,7 +364,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 146);
+            this.label4.Location = new System.Drawing.Point(48, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 20);
             this.label4.TabIndex = 1;
@@ -405,7 +374,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 91);
+            this.label3.Location = new System.Drawing.Point(43, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 1;
@@ -699,6 +668,28 @@
             this.rToolStripMenuItem.Text = "Refresh";
             this.rToolStripMenuItem.Click += new System.EventHandler(this.rToolStripMenuItem_Click);
             // 
+            // cboClasses
+            // 
+            this.cboClasses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboClasses.FormattingEnabled = true;
+            this.cboClasses.Location = new System.Drawing.Point(176, 138);
+            this.cboClasses.Name = "cboClasses";
+            this.cboClasses.Size = new System.Drawing.Size(236, 36);
+            this.cboClasses.TabIndex = 6;
+            this.cboClasses.SelectedIndexChanged += new System.EventHandler(this.cboClasses_SelectedIndexChanged);
+            this.cboClasses.SelectionChangeCommitted += new System.EventHandler(this.cboClasses_SelectionChangeCommitted);
+            // 
+            // cboSubject
+            // 
+            this.cboSubject.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSubject.FormattingEnabled = true;
+            this.cboSubject.Location = new System.Drawing.Point(175, 187);
+            this.cboSubject.Name = "cboSubject";
+            this.cboSubject.Size = new System.Drawing.Size(236, 36);
+            this.cboSubject.TabIndex = 6;
+            this.cboSubject.SelectedIndexChanged += new System.EventHandler(this.cboClasses_SelectedIndexChanged);
+            this.cboSubject.SelectionChangeCommitted += new System.EventHandler(this.cboClasses_SelectionChangeCommitted);
+            // 
             // frmScoreManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -740,10 +731,8 @@
         private System.Windows.Forms.DataGridView dgvScores;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem btnDelete;
-        private Guna.UI2.WinForms.Guna2ComboBox cboClasses;
         private Guna.UI2.WinForms.Guna2TextBox txtStudentName;
         private Guna.UI2.WinForms.Guna2TextBox txtStudentID;
-        private Guna.UI2.WinForms.Guna2ComboBox cboSubject;
         private Guna.UI2.WinForms.Guna2TextBox txtScoreFinal;
         private Guna.UI2.WinForms.Guna2TextBox txtScoreElement;
         private System.Windows.Forms.Label label9;
@@ -769,5 +758,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem rToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cboClasses;
+        private System.Windows.Forms.ComboBox cboSubject;
     }
 }

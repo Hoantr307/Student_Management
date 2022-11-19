@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -15,6 +16,8 @@ namespace Student_Management
 {
     public partial class frmScoreManage : Form
     {
+        SqlConnection conn = new SqlConnection(@"Data Source=HOAN;Initial Catalog=QLSinhVien;Integrated Security=True;TrustServerCertificate=True");
+
         public frmScoreManage()
         {
             InitializeComponent();
@@ -197,30 +200,60 @@ namespace Student_Management
 
         private void txtStudentID_Leave(object sender, EventArgs e)
         {
-            DataTable dt = DataProvider.Instance.ExecuteQuery("select StudentName, ClassID from Student where StudentID = " + txtStudentID.Text);
-            foreach (DataRow item in dt.Rows)
+            try
             {
-                txtStudentName.Text = item["StudentName"].ToString();
+                DataTable dt = DataProvider.Instance.ExecuteQuery("select StudentName, ClassID from Student where StudentID = " + txtStudentID.Text);
+                foreach (DataRow item in dt.Rows)
+                {
+                    txtStudentName.Text = item["StudentName"].ToString();
+                }
             }
+            catch (Exception)
+            {
+
+               
+            }
+            
         }
 
         private void frmScoreManage_Load(object sender, EventArgs e)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("GetResult");
             dgvScores.DataSource = data;
+
             DataTable dt = DataProvider.Instance.ExecuteQuery("select * from Class");
             cboClasses.DataSource = dt;
             cboClasses.DisplayMember = "ClassName";
             cboClasses.ValueMember = "ClassID";
-            DataTable dt1 = DataProvider.Instance.ExecuteQuery("select * from Subject");
-            cboSubject.DataSource = dt1;
+            
+
+            DataTable dt2 = DataProvider.Instance.ExecuteQuery("select * from Subject");
+            cboSubject.DataSource = dt2;
             cboSubject.DisplayMember = "SubjectName";
             cboSubject.ValueMember = "SubjectID";
+           
         }
 
         private void rToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmScoreManage_Load(sender, e);
+        }
+
+        private void cboClasses_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from Result where ClassID = "+ cboClasses.SelectedValue);
+            dgvScores.DataSource = data;
+        }
+
+        private void txtScoreFinal_Enter(object sender, EventArgs e)
+        {
+            //string diem = ((Convert.ToInt32(txtScoreElement.Text) * 0.25 + Convert.ToInt32(txtScorePractice.Text) * 0.25 + Convert.ToInt32(txtScoreAvg.Text) * 0.5) / 3).ToString();
+            //txtScoreFinal.Text = diem;
+        }
+
+        private void cboClasses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStudent));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtBirth = new System.Windows.Forms.MaskedTextBox();
-            this.cboClassID = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cboGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtStudentName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -65,6 +64,7 @@
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cboClassID = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
@@ -79,8 +79,8 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.txtBirth);
             this.groupBox1.Controls.Add(this.cboClassID);
+            this.groupBox1.Controls.Add(this.txtBirth);
             this.groupBox1.Controls.Add(this.cboGender);
             this.groupBox1.Controls.Add(this.txtStudentName);
             this.groupBox1.Controls.Add(this.label6);
@@ -106,22 +106,6 @@
             this.txtBirth.Name = "txtBirth";
             this.txtBirth.Size = new System.Drawing.Size(237, 34);
             this.txtBirth.TabIndex = 6;
-            // 
-            // cboClassID
-            // 
-            this.cboClassID.BackColor = System.Drawing.Color.Transparent;
-            this.cboClassID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboClassID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboClassID.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboClassID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboClassID.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboClassID.ForeColor = System.Drawing.Color.Black;
-            this.cboClassID.ItemHeight = 30;
-            this.cboClassID.Location = new System.Drawing.Point(683, 130);
-            this.cboClassID.Name = "cboClassID";
-            this.cboClassID.Size = new System.Drawing.Size(237, 36);
-            this.cboClassID.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.cboClassID.TabIndex = 5;
             // 
             // cboGender
             // 
@@ -507,6 +491,15 @@
             this.rToolStripMenuItem.Text = "Refresh";
             this.rToolStripMenuItem.Click += new System.EventHandler(this.rToolStripMenuItem_Click);
             // 
+            // cboClassID
+            // 
+            this.cboClassID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboClassID.FormattingEnabled = true;
+            this.cboClassID.Location = new System.Drawing.Point(683, 135);
+            this.cboClassID.Name = "cboClassID";
+            this.cboClassID.Size = new System.Drawing.Size(237, 36);
+            this.cboClassID.TabIndex = 7;
+            // 
             // frmStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -552,7 +545,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cboGender;
         private Guna.UI2.WinForms.Guna2TextBox txtStudentName;
         private Guna.UI2.WinForms.Guna2TextBox txtStudentID;
-        private Guna.UI2.WinForms.Guna2ComboBox cboClassID;
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private System.Windows.Forms.MaskedTextBox txtBirth;
         private System.Windows.Forms.ToolStripButton tsbImport;
@@ -566,5 +558,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem rToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cboClassID;
     }
 }

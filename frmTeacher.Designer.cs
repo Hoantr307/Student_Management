@@ -121,8 +121,9 @@
             this.cboLevel.Items.AddRange(new object[] {
             "Tiến sĩ",
             "Thạc sĩ",
-            "Cử nhân",
-            "Kỹ sư"});
+            "Giảng Viên",
+            "Giáo Sư",
+            "Phó Giáo Sư"});
             this.cboLevel.Location = new System.Drawing.Point(683, 127);
             this.cboLevel.Name = "cboLevel";
             this.cboLevel.Size = new System.Drawing.Size(237, 36);
