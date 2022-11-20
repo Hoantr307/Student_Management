@@ -325,7 +325,7 @@
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2PictureBox1.Image = global::Student_Management.Properties.Resources.tải_xuống;
+            this.guna2PictureBox1.Image = global::Student_Management.Properties.Resources.truong_dai_hoc_su_pham_ky_thuat_hung_yen_tuyen_sinh_nam_2018_2;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

@@ -196,7 +196,7 @@
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.lbDisplayName});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 774);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 974);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
             this.statusStrip1.Size = new System.Drawing.Size(1500, 26);
@@ -446,9 +446,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Student_Management.Properties.Resources.tải_xuống;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1500, 800);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Student_Management.Properties.Resources._186503191_1500534483621622_8159597822051476278_n;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(1500, 1000);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);

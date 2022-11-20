@@ -5,16 +5,27 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student Management", "Student Management.csproj", "{D5997646-F376-40E5-89CF-1EA7F66A5DA6}"
 EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "Setup Project1", "..\Setup Project1\Setup Project1.aiproj", "{0D944B4D-5331-4702-997A-E1EAEF0BFC30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5997646-F376-40E5-89CF-1EA7F66A5DA6}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{D5997646-F376-40E5-89CF-1EA7F66A5DA6}.All|Any CPU.Build.0 = Release|Any CPU
 		{D5997646-F376-40E5-89CF-1EA7F66A5DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D5997646-F376-40E5-89CF-1EA7F66A5DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5997646-F376-40E5-89CF-1EA7F66A5DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5997646-F376-40E5-89CF-1EA7F66A5DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D944B4D-5331-4702-997A-E1EAEF0BFC30}.All|Any CPU.ActiveCfg = DefaultBuild
+		{0D944B4D-5331-4702-997A-E1EAEF0BFC30}.All|Any CPU.Build.0 = DefaultBuild
+		{0D944B4D-5331-4702-997A-E1EAEF0BFC30}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{0D944B4D-5331-4702-997A-E1EAEF0BFC30}.Debug|Any CPU.Build.0 = DefaultBuild
+		{0D944B4D-5331-4702-997A-E1EAEF0BFC30}.Release|Any CPU.ActiveCfg = DefaultBuild
+		{0D944B4D-5331-4702-997A-E1EAEF0BFC30}.Release|Any CPU.Build.0 = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

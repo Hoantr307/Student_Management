@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Student_Management.DAO;
+using System.Diagnostics;
 
 namespace Student_Management
 {
@@ -18,8 +19,12 @@ namespace Student_Management
         public frmLogin()
         {
             InitializeComponent();
-            
-            
+            Process proc = new Process();
+            proc.StartInfo.FileName = Application.StartupPath + @"\data\Create database.bat";
+            proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            proc.Start();
+
+
         }
         public static string userName;
         public static string passWord;

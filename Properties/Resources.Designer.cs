@@ -93,6 +93,16 @@ namespace Student_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _186503191_1500534483621622_8159597822051476278_n {
+            get {
+                object obj = ResourceManager.GetObject("186503191_1500534483621622_8159597822051476278_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _216242_home_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("216242_home_icon (1)", resourceCulture);
@@ -243,6 +253,16 @@ namespace Student_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kt_hung_yen {
+            get {
+                object obj = ResourceManager.GetObject("kt-hung-yen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_wide2 {
             get {
                 object obj = ResourceManager.GetObject("logo-wide2", resourceCulture);
@@ -266,6 +286,16 @@ namespace Student_Management.Properties {
         internal static System.Drawing.Bitmap tải_xuống {
             get {
                 object obj = ResourceManager.GetObject("tải xuống", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap truong_dai_hoc_su_pham_ky_thuat_hung_yen_tuyen_sinh_nam_2018_2 {
+            get {
+                object obj = ResourceManager.GetObject("truong-dai-hoc-su-pham-ky-thuat-hung-yen-tuyen-sinh-nam-2018-2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

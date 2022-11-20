@@ -355,5 +355,14 @@
   <ItemGroup>
     <None Include="Resources\103409_text_add_book_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truong-dai-hoc-su-pham-ky-thuat-hung-yen-tuyen-sinh-nam-2018-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kt-hung-yen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\186503191_1500534483621622_8159597822051476278_n.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
