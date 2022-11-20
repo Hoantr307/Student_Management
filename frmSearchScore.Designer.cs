@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearchScore));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.LbClassID = new System.Windows.Forms.Label();
+            this.lbStudentName = new System.Windows.Forms.Label();
+            this.lbStudentID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvScores = new System.Windows.Forms.DataGridView();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,9 +46,11 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbStudentID = new System.Windows.Forms.Label();
-            this.lbStudentName = new System.Windows.Forms.Label();
-            this.LbClassID = new System.Windows.Forms.Label();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScores)).BeginInit();
@@ -76,6 +77,33 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Điểm Sinh Viên";
+            // 
+            // LbClassID
+            // 
+            this.LbClassID.AutoSize = true;
+            this.LbClassID.Location = new System.Drawing.Point(817, 46);
+            this.LbClassID.Name = "LbClassID";
+            this.LbClassID.Size = new System.Drawing.Size(53, 20);
+            this.LbClassID.TabIndex = 2;
+            this.LbClassID.Text = "label1";
+            // 
+            // lbStudentName
+            // 
+            this.lbStudentName.AutoSize = true;
+            this.lbStudentName.Location = new System.Drawing.Point(498, 46);
+            this.lbStudentName.Name = "lbStudentName";
+            this.lbStudentName.Size = new System.Drawing.Size(53, 20);
+            this.lbStudentName.TabIndex = 2;
+            this.lbStudentName.Text = "label1";
+            // 
+            // lbStudentID
+            // 
+            this.lbStudentID.AutoSize = true;
+            this.lbStudentID.Location = new System.Drawing.Point(161, 46);
+            this.lbStudentID.Name = "lbStudentID";
+            this.lbStudentID.Size = new System.Drawing.Size(53, 20);
+            this.lbStudentID.TabIndex = 2;
+            this.lbStudentID.Text = "label1";
             // 
             // label4
             // 
@@ -141,61 +169,6 @@
             this.dgvScores.Size = new System.Drawing.Size(1160, 550);
             this.dgvScores.TabIndex = 0;
             // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.Controls.Add(this.groupBox1);
-            this.guna2Panel3.Controls.Add(this.groupBox2);
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1174, 719);
-            this.guna2Panel3.TabIndex = 7;
-            // 
-            // contextMenuStrip
-            // 
-            this.contextMenuStrip.BackColor = System.Drawing.SystemColors.Control;
-            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnDelete});
-            this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.ShowCheckMargin = true;
-            this.contextMenuStrip.Size = new System.Drawing.Size(236, 44);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.AutoSize = false;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Image = global::Student_Management.Properties.Resources._4763274_instructor_professor_teacher_teaching_tutor_icon;
-            this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(240, 40);
-            this.btnDelete.Text = "Xóa Giảng Viên";
-            // 
-            // guna2ContextMenuStrip1
-            // 
-            this.guna2ContextMenuStrip1.AutoSize = false;
-            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.guna2ContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rToolStripMenuItem});
-            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
-            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
-            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
-            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
-            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(250, 44);
-            // 
-            // rToolStripMenuItem
-            // 
-            this.rToolStripMenuItem.AutoSize = false;
-            this.rToolStripMenuItem.Name = "rToolStripMenuItem";
-            this.rToolStripMenuItem.Size = new System.Drawing.Size(250, 40);
-            this.rToolStripMenuItem.Text = "Refresh";
-            // 
             // Column4
             // 
             this.Column4.DataPropertyName = "SubjectID";
@@ -252,41 +225,70 @@
             this.Column9.Name = "Column9";
             this.Column9.Width = 125;
             // 
-            // lbStudentID
+            // guna2Panel3
             // 
-            this.lbStudentID.AutoSize = true;
-            this.lbStudentID.Location = new System.Drawing.Point(161, 46);
-            this.lbStudentID.Name = "lbStudentID";
-            this.lbStudentID.Size = new System.Drawing.Size(53, 20);
-            this.lbStudentID.TabIndex = 2;
-            this.lbStudentID.Text = "label1";
+            this.guna2Panel3.Controls.Add(this.groupBox1);
+            this.guna2Panel3.Controls.Add(this.groupBox2);
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(1174, 719);
+            this.guna2Panel3.TabIndex = 7;
             // 
-            // lbStudentName
+            // contextMenuStrip
             // 
-            this.lbStudentName.AutoSize = true;
-            this.lbStudentName.Location = new System.Drawing.Point(498, 46);
-            this.lbStudentName.Name = "lbStudentName";
-            this.lbStudentName.Size = new System.Drawing.Size(53, 20);
-            this.lbStudentName.TabIndex = 2;
-            this.lbStudentName.Text = "label1";
+            this.contextMenuStrip.BackColor = System.Drawing.SystemColors.Control;
+            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnDelete});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            this.contextMenuStrip.ShowCheckMargin = true;
+            this.contextMenuStrip.Size = new System.Drawing.Size(236, 44);
             // 
-            // LbClassID
+            // btnDelete
             // 
-            this.LbClassID.AutoSize = true;
-            this.LbClassID.Location = new System.Drawing.Point(817, 46);
-            this.LbClassID.Name = "LbClassID";
-            this.LbClassID.Size = new System.Drawing.Size(53, 20);
-            this.LbClassID.TabIndex = 2;
-            this.LbClassID.Text = "label1";
+            this.btnDelete.AutoSize = false;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Image = global::Student_Management.Properties.Resources._4763274_instructor_professor_teacher_teaching_tutor_icon;
+            this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(240, 40);
+            this.btnDelete.Text = "Xóa Giảng Viên";
             // 
-            // frmsearchscore
+            // guna2ContextMenuStrip1
+            // 
+            this.guna2ContextMenuStrip1.AutoSize = false;
+            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.guna2ContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rToolStripMenuItem});
+            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(250, 44);
+            // 
+            // rToolStripMenuItem
+            // 
+            this.rToolStripMenuItem.AutoSize = false;
+            this.rToolStripMenuItem.Name = "rToolStripMenuItem";
+            this.rToolStripMenuItem.Size = new System.Drawing.Size(250, 40);
+            this.rToolStripMenuItem.Text = "Refresh";
+            // 
+            // frmSearchScore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 719);
             this.Controls.Add(this.guna2Panel3);
-            this.Name = "frmsearchscore";
-            this.Text = "Quản Lý Điểm";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmSearchScore";
+            this.Text = "Điểm Sinh Viên";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmsearchscore_FormClosed);
             this.Load += new System.EventHandler(this.frmsearchscore_Load);
             this.groupBox1.ResumeLayout(false);
