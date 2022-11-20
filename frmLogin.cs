@@ -46,17 +46,34 @@ namespace Student_Management
                 userName = UserName;
                 passWord = Password;
                 type = Type;
+                if (type == 0)
+                {
+                    frmMain f = new frmMain();
+                    f.Show();
+                    this.Hide();
+                    f.Exit += F_Exit;
 
-                frmMain f = new frmMain();
-                f.Show();
-                this.Hide();
-                f.Exit += F_Exit;
+                }
+                else
+                {
+                    frmSearchScore f = new frmSearchScore();
+                    f.Show();
+                    Hide();
+                    f.Exit += F_Exit1;
+                }
             }
             else
             {
                 MessageBox.Show("Bạn Nhập Sai Tài Khoản, Mật Khẩu Hoặc Sai Loại Tài Khoản! Yêu Cầu Nhập Lại!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
                 
+        }
+
+        private void F_Exit1(object sender, EventArgs e)
+        {
+            (sender as frmSearchScore).isExit = false;
+            (sender as frmSearchScore).Close();
+            this.Show();
         }
 
         private void F_Exit(object sender, EventArgs e)

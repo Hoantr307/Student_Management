@@ -85,7 +85,7 @@
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Location = new System.Drawing.Point(261, 225);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.PlaceholderText = "Mật Khẩu";
@@ -110,7 +110,7 @@
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.txtUsername.Location = new System.Drawing.Point(261, 86);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(210)))));
@@ -120,7 +120,6 @@
             this.txtUsername.TabIndex = 0;
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
-            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // guna2PictureBox2
             // 
@@ -149,7 +148,7 @@
             this.txtRePassword.ForeColor = System.Drawing.Color.Black;
             this.txtRePassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRePassword.Location = new System.Drawing.Point(261, 289);
-            this.txtRePassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtRePassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtRePassword.Name = "txtRePassword";
             this.txtRePassword.PasswordChar = '●';
             this.txtRePassword.PlaceholderText = "Nhập Lại Mật Khẩu";
@@ -218,7 +217,7 @@
             this.txtDisplayName.ForeColor = System.Drawing.Color.Black;
             this.txtDisplayName.HoverState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.txtDisplayName.Location = new System.Drawing.Point(261, 160);
-            this.txtDisplayName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDisplayName.Margin = new System.Windows.Forms.Padding(5);
             this.txtDisplayName.Name = "txtDisplayName";
             this.txtDisplayName.PasswordChar = '\0';
             this.txtDisplayName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(210)))));
@@ -246,9 +245,9 @@
             this.lbExist.ForeColor = System.Drawing.Color.OrangeRed;
             this.lbExist.Location = new System.Drawing.Point(265, 140);
             this.lbExist.Name = "lbExist";
-            this.lbExist.Size = new System.Drawing.Size(168, 16);
+            this.lbExist.Size = new System.Drawing.Size(189, 16);
             this.lbExist.TabIndex = 19;
-            this.lbExist.Text = "Tên Tài Khoản Đã Tồn Tại!";
+            this.lbExist.Text = "Tên Tài Khoản Không Tồn Tại!";
             this.lbExist.Visible = false;
             // 
             // guna2Panel1

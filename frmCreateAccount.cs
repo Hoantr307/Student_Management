@@ -20,17 +20,24 @@ namespace Student_Management
             InitializeComponent();
         }
 
+        
         private void btnCreateAcc_Click(object sender, EventArgs e)
         {
-            try
-            {
+          /*  try
+            {*/
                 int type = cboPosition.Text == "Giáo Viên" ? 0 : 1;
                 if (txtUsername.Text != "" && txtDisplayName.Text != "" && txtPassword.Text != "" && txtRePassword.Text == txtPassword.Text && txtRePassword.Text != "" && cboPosition.Text != "")
                 {
-                    
+                    if (!Exist(txtUsername.Text))
+                    {
+                        lbExist.Visible = true;
+                        return;
+                    }
+                    else lbExist.Visible = false;
                     string CommandText = "USP_CreateAccount @userName , @displayName , @passWord , @accountType";
 
                     DataProvider.Instance.ExecuteQuery(CommandText, new object[] { txtUsername.Text.Trim(), txtDisplayName.Text.Trim(), txtPassword.Text.Trim(), type });
+                    MessageBox.Show("Tạo Tài Khoản Thành Công");
                     this.Close();
 
                 }
@@ -38,11 +45,11 @@ namespace Student_Management
                 {
                     MessageBox.Show("Bạn Nhập Thiếu Thông Tin");
                 }
-            }
+            /*}
             catch 
             {
                 MessageBox.Show("Lỗi!");
-            }
+            }*/
         }
 
         private void txtRePassword_Leave(object sender, EventArgs e)
@@ -64,21 +71,23 @@ namespace Student_Management
 
         bool Exist(string UserName)
         {
+            DataTable dt;
+            if (cboPosition.Text == "Sinh Viên")
+            {
+                string CommandText = "select * from Student where studentID = '" + UserName + "'";
+                dt = DataProvider.Instance.ExecuteQuery(CommandText);
+
+            }
+            else
+            {
+                string CommandText = "select * from Teacher where TeacherID = '" + UserName + "'";
+                dt = DataProvider.Instance.ExecuteQuery(CommandText);
+            }
             
-            string CommandText = "select * from Account where UserName = '" + UserName + "'";
-            DataTable dt = DataProvider.Instance.ExecuteQuery(CommandText);
             return dt.Rows.Count > 0;
         }
 
-        private void txtUsername_Leave(object sender, EventArgs e)
-        {
-            if (Exist(txtUsername.Text))
-            {
-                lbExist.Visible = true;
-            }
-            else lbExist.Visible = false;
-
-        }
+       
 
         private void txtUsername_Enter(object sender, EventArgs e)
         {

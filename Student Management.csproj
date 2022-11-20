@@ -141,6 +141,12 @@
     <Compile Include="frmScoreManage.Designer.cs">
       <DependentUpon>frmScoreManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSearchScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchScore.Designer.cs">
+      <DependentUpon>frmSearchScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmScoreManage.resx">
       <DependentUpon>frmScoreManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchScore.resx">
+      <DependentUpon>frmSearchScore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStudent.resx">
       <DependentUpon>frmStudent.cs</DependentUpon>

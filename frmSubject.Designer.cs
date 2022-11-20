@@ -32,7 +32,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtLessonNumber = new System.Windows.Forms.MaskedTextBox();
             this.cboSemester = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cboTeachers = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSubjectName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.cboTeachers = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
@@ -75,9 +75,9 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.cboTeachers);
             this.groupBox1.Controls.Add(this.txtLessonNumber);
             this.groupBox1.Controls.Add(this.cboSemester);
-            this.groupBox1.Controls.Add(this.cboTeachers);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtSubjectName);
             this.groupBox1.Controls.Add(this.label6);
@@ -121,28 +121,6 @@
             this.cboSemester.Size = new System.Drawing.Size(157, 36);
             this.cboSemester.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.cboSemester.TabIndex = 5;
-            // 
-            // cboTeachers
-            // 
-            this.cboTeachers.BackColor = System.Drawing.Color.Transparent;
-            this.cboTeachers.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboTeachers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTeachers.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboTeachers.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboTeachers.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboTeachers.ForeColor = System.Drawing.Color.Black;
-            this.cboTeachers.ItemHeight = 30;
-            this.cboTeachers.Items.AddRange(new object[] {
-            "Tiến sĩ",
-            "Thạc sĩ",
-            "Cử nhân",
-            "Kỹ sư"});
-            this.cboTeachers.Location = new System.Drawing.Point(679, 40);
-            this.cboTeachers.Name = "cboTeachers";
-            this.cboTeachers.Size = new System.Drawing.Size(237, 36);
-            this.cboTeachers.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.cboTeachers.TabIndex = 5;
-            this.cboTeachers.SelectionChangeCommitted += new System.EventHandler(this.cboTeachers_SelectionChangeCommitted);
             // 
             // label5
             // 
@@ -471,6 +449,15 @@
             this.btnDelete.Text = "Xóa Môn Học";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // cboTeachers
+            // 
+            this.cboTeachers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTeachers.FormattingEnabled = true;
+            this.cboTeachers.Location = new System.Drawing.Point(679, 35);
+            this.cboTeachers.Name = "cboTeachers";
+            this.cboTeachers.Size = new System.Drawing.Size(237, 36);
+            this.cboTeachers.TabIndex = 7;
+            // 
             // frmSubject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -514,7 +501,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnDelete;
         private Guna.UI2.WinForms.Guna2TextBox txtSubjectName;
         private Guna.UI2.WinForms.Guna2TextBox txtSubjectID;
-        private Guna.UI2.WinForms.Guna2ComboBox cboTeachers;
         private System.Windows.Forms.MaskedTextBox txtLessonNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -527,5 +513,6 @@
         private System.Windows.Forms.ToolStripTextBox txtFileName;
         private Guna.UI2.WinForms.Guna2ComboBox cboSemester;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cboTeachers;
     }
 }
