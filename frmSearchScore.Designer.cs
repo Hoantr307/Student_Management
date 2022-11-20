@@ -39,6 +39,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvScores = new System.Windows.Forms.DataGridView();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,11 +51,6 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
-            this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScores)).BeginInit();
@@ -169,62 +169,6 @@
             this.dgvScores.Size = new System.Drawing.Size(1160, 550);
             this.dgvScores.TabIndex = 0;
             // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "SubjectID";
-            this.Column4.HeaderText = "Môn Học";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "ScoreAvg";
-            this.Column5.HeaderText = "Điểm Trung Bình";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "ScoreElement";
-            this.Column10.HeaderText = "Điểm Thành Phần";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "ScorePractice";
-            this.Column6.HeaderText = "Điểm Thực Hành";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "ScoreFinal";
-            this.Column7.HeaderText = "Điểm Tổng Kết";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Conduct";
-            this.Column8.HeaderText = "Hạnh Kiểm";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 125;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "Description";
-            this.Column9.HeaderText = "Mô Tả";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 125;
-            // 
             // guna2Panel3
             // 
             this.guna2Panel3.Controls.Add(this.groupBox1);
@@ -280,6 +224,62 @@
             this.rToolStripMenuItem.Size = new System.Drawing.Size(250, 40);
             this.rToolStripMenuItem.Text = "Refresh";
             // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "SubjectID";
+            this.Column4.HeaderText = "Môn Học";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "ScoreAvg";
+            this.Column5.HeaderText = "Điểm Trung Bình";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "ScoreElement";
+            this.Column10.HeaderText = "Điểm Thành Phần";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "ScorePractice";
+            this.Column6.HeaderText = "Điểm Thực Hành";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "ScoreFinal";
+            this.Column7.HeaderText = "Điểm Tổng Kết";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Conduct";
+            this.Column8.HeaderText = "Hạnh Kiểm";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 125;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column9.DataPropertyName = "Description";
+            this.Column9.HeaderText = "Mô Tả";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            // 
             // frmSearchScore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -288,6 +288,7 @@
             this.Controls.Add(this.guna2Panel3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSearchScore";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Điểm Sinh Viên";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmsearchscore_FormClosed);
             this.Load += new System.EventHandler(this.frmsearchscore_Load);
