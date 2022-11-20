@@ -138,6 +138,7 @@ namespace Student_Management
             cboTeachers.DataSource = dt;
             cboTeachers.DisplayMember = "TeacherName";
             cboTeachers.ValueMember = "TeacherID";
+            cboTeachers.SelectedIndex = -1;
         }
 
         private void dgvSubject_CellClick(object sender, DataGridViewCellEventArgs e)

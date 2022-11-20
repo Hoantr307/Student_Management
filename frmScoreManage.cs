@@ -29,8 +29,16 @@ namespace Student_Management
 
         private void tsbAdd_Click(object sender, EventArgs e)
         {
+            string qr = $"select classID from student where StudentID = '{txtStudentID.Text}' and ClassID = '{cboClasses.SelectedValue}'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(qr);
+            if (dt.Rows.Count <= 0)
+            {
+                MessageBox.Show("Bạn Chọn Sai Lớp!");
+                return;
+            }     
             try
             {
+
                 string Query = $"insert Result values(" +
                     $"'{txtStudentID.Text}', N'{txtStudentName.Text}', '{cboClasses.SelectedValue}', '{cboSubject.SelectedValue}', {txtScoreAvg.Text}, {txtScoreElement.Text}, {txtScorePractice.Text}, {txtScoreFinal.Text}, N'{cboConduct.Text}', N'{txtDescription.Text}')";
                 DataProvider.Instance.ExecuteQuery(Query);
@@ -206,6 +214,7 @@ namespace Student_Management
                 foreach (DataRow item in dt.Rows)
                 {
                     txtStudentName.Text = item["StudentName"].ToString();
+                    
                 }
             }
             catch (Exception)
@@ -225,13 +234,14 @@ namespace Student_Management
             cboClasses.DataSource = dt;
             cboClasses.DisplayMember = "ClassName";
             cboClasses.ValueMember = "ClassID";
-            
+            cboClasses.SelectedIndex = -1;
 
             DataTable dt2 = DataProvider.Instance.ExecuteQuery("select * from Subject");
             cboSubject.DataSource = dt2;
             cboSubject.DisplayMember = "SubjectName";
             cboSubject.ValueMember = "SubjectID";
-           
+            cboSubject.SelectedIndex = -1;
+
         }
 
         private void rToolStripMenuItem_Click(object sender, EventArgs e)

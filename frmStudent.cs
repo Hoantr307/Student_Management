@@ -30,6 +30,7 @@ namespace Student_Management
             cboClassID.DataSource = dt;
             cboClassID.DisplayMember = "ClassName";
             cboClassID.ValueMember = "ClassID";
+            cboClassID.SelectedIndex = -1;
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)
