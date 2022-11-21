@@ -301,13 +301,13 @@
             this.btnDelete});
             this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.ShowCheckMargin = true;
-            this.contextMenuStrip.Size = new System.Drawing.Size(215, 44);
+            this.contextMenuStrip.Size = new System.Drawing.Size(249, 72);
             // 
             // btnDelete
             // 
             this.btnDelete.AutoSize = false;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Image = global::Student_Management.Properties.Resources._4763274_instructor_professor_teacher_teaching_tutor_icon;
+            this.btnDelete.Image = global::Student_Management.Properties.Resources._3209358_delete_edit_minus_remove_subtract_icon;
             this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(240, 40);

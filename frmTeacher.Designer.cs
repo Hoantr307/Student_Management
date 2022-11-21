@@ -79,6 +79,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.ContextMenuStrip = this.guna2ContextMenuStrip1;
             this.groupBox1.Controls.Add(this.txtPhone);
             this.groupBox1.Controls.Add(this.cboLevel);
             this.groupBox1.Controls.Add(this.cboGender);
@@ -475,13 +476,13 @@
             this.btnDelete});
             this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.ShowCheckMargin = true;
-            this.contextMenuStrip.Size = new System.Drawing.Size(236, 44);
+            this.contextMenuStrip.Size = new System.Drawing.Size(249, 72);
             // 
             // btnDelete
             // 
             this.btnDelete.AutoSize = false;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Image = global::Student_Management.Properties.Resources._4763274_instructor_professor_teacher_teaching_tutor_icon;
+            this.btnDelete.Image = global::Student_Management.Properties.Resources._8673507_ic_fluent_person_delete_filled_icon1;
             this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(240, 40);

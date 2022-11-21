@@ -364,5 +364,26 @@
   <ItemGroup>
     <None Include="Resources\186503191_1500534483621622_8159597822051476278_n.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mais De 500 Programação Wallpapers &amp; Background Beautiful Melhores Disponíveis Para Download Programação Fotos Grátis Em Zicxa_com Imagens.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z3898253147447_5aec7a2650d53efb5858a7d97a532ff5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z3898255251609_c0ef5e710a053b06b6c51e73d77a6ebf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8673507_ic_fluent_person_delete_filled_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8673507_ic_fluent_person_delete_filled_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3209358_delete_edit_minus_remove_subtract_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

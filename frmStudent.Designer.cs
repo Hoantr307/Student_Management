@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStudent));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboClassID = new System.Windows.Forms.ComboBox();
             this.txtBirth = new System.Windows.Forms.MaskedTextBox();
             this.cboGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtStudentName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -64,7 +65,6 @@
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cboClassID = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
@@ -79,6 +79,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.ContextMenuStrip = this.guna2ContextMenuStrip1;
             this.groupBox1.Controls.Add(this.cboClassID);
             this.groupBox1.Controls.Add(this.txtBirth);
             this.groupBox1.Controls.Add(this.cboGender);
@@ -98,6 +99,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Sinh Viên";
+            // 
+            // cboClassID
+            // 
+            this.cboClassID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboClassID.FormattingEnabled = true;
+            this.cboClassID.Location = new System.Drawing.Point(683, 135);
+            this.cboClassID.Name = "cboClassID";
+            this.cboClassID.Size = new System.Drawing.Size(237, 36);
+            this.cboClassID.TabIndex = 7;
             // 
             // txtBirth
             // 
@@ -458,7 +468,7 @@
             // 
             this.btnDelete.AutoSize = false;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Image = global::Student_Management.Properties.Resources._4763274_instructor_professor_teacher_teaching_tutor_icon;
+            this.btnDelete.Image = global::Student_Management.Properties.Resources._8673507_ic_fluent_person_delete_filled_icon;
             this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(240, 40);
@@ -490,15 +500,6 @@
             this.rToolStripMenuItem.Size = new System.Drawing.Size(250, 40);
             this.rToolStripMenuItem.Text = "Refresh";
             this.rToolStripMenuItem.Click += new System.EventHandler(this.rToolStripMenuItem_Click);
-            // 
-            // cboClassID
-            // 
-            this.cboClassID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboClassID.FormattingEnabled = true;
-            this.cboClassID.Location = new System.Drawing.Point(683, 135);
-            this.cboClassID.Name = "cboClassID";
-            this.cboClassID.Size = new System.Drawing.Size(237, 36);
-            this.cboClassID.TabIndex = 7;
             // 
             // frmStudent
             // 

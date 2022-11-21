@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboTeachers = new System.Windows.Forms.ComboBox();
             this.txtLessonNumber = new System.Windows.Forms.MaskedTextBox();
             this.cboSemester = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@
             this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.cboTeachers = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
@@ -92,6 +92,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Môn Học";
+            // 
+            // cboTeachers
+            // 
+            this.cboTeachers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTeachers.FormattingEnabled = true;
+            this.cboTeachers.Location = new System.Drawing.Point(679, 35);
+            this.cboTeachers.Name = "cboTeachers";
+            this.cboTeachers.Size = new System.Drawing.Size(237, 36);
+            this.cboTeachers.TabIndex = 7;
             // 
             // txtLessonNumber
             // 
@@ -436,27 +445,18 @@
             this.btnDelete});
             this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.ShowCheckMargin = true;
-            this.contextMenuStrip.Size = new System.Drawing.Size(222, 44);
+            this.contextMenuStrip.Size = new System.Drawing.Size(249, 72);
             // 
             // btnDelete
             // 
             this.btnDelete.AutoSize = false;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Image = global::Student_Management.Properties.Resources._4763274_instructor_professor_teacher_teaching_tutor_icon;
+            this.btnDelete.Image = global::Student_Management.Properties.Resources._3209358_delete_edit_minus_remove_subtract_icon;
             this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(240, 40);
             this.btnDelete.Text = "Xóa Môn Học";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // cboTeachers
-            // 
-            this.cboTeachers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTeachers.FormattingEnabled = true;
-            this.cboTeachers.Location = new System.Drawing.Point(679, 35);
-            this.cboTeachers.Name = "cboTeachers";
-            this.cboTeachers.Size = new System.Drawing.Size(237, 36);
-            this.cboTeachers.TabIndex = 7;
             // 
             // frmSubject
             // 

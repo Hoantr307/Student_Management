@@ -19,6 +19,7 @@ namespace Student_Management
             InitializeComponent();
         }
 
+        
         private void frmReportScore_Load(object sender, EventArgs e)
         {
             reportScoreManage rpt = new reportScoreManage();
@@ -26,11 +27,6 @@ namespace Student_Management
             rpt.SetDataSource(dt);
             crvScore.ReportSource = rpt;
             crvScore.RefreshReport();
-        }
-
-        private void crvClass_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

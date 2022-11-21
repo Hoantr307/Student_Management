@@ -13,7 +13,7 @@ create table Account
 )
 go
 
-select * from Account
+select * from subject
 
 
 create table Student
@@ -57,7 +57,7 @@ create table Subject
 	Semester int
 )
 go
-drop table Result
+
 create table Result
 (
 	StudentID int foreign key references Student(StudentID) on delete cascade on update cascade,

@@ -42,7 +42,7 @@ namespace Student_Management
 
         private void tsbEdit_Click(object sender, EventArgs e)
         {
-            string query = $"update Subject set SubjectName = N'{txtSubjectName.Text}', LessonNumber = {txtLessonNumber.Text}, TeacherID = {cboTeachers.SelectedValue}, Semester = {cboSemester.Text} Where SubjectID = '{txtSubjectID.Text}'";
+            string query = $"update Subject set SubjectName = N'{txtSubjectName.Text}', LessonNumber = {txtLessonNumber.Text} , TeacherID = {cboTeachers.SelectedValue} , Semester = {cboSemester.Text} Where SubjectID = '{txtSubjectID.Text}'";
             DataProvider.Instance.ExecuteQuery(query);
             frmSubject_Load(sender, e);
         }

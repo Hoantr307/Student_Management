@@ -33,6 +33,11 @@ namespace Student_Management
 
             DataTable data = DataProvider.Instance.ExecuteQuery("select SubjectID, ScoreAvg, ScoreElement, ScorePractice, ScoreFinal, Conduct, Description from result where studentID = " + lbStudentID.Text); 
             dgvScores.DataSource = data;
+            DataTable dt1 = DataProvider.Instance.ExecuteQuery("select DisplayName From account where UserName = '" + frmLogin.userName + "' and PassWord = '" + frmLogin.passWord + "' and AccountType = " + frmLogin.type);
+            foreach (DataRow item in dt1.Rows)
+            {
+                lbDisplayName.Text = item["DisplayName"].ToString();
+            }
         }
 
         private void frmsearchscore_FormClosed(object sender, FormClosedEventArgs e)
@@ -41,6 +46,23 @@ namespace Student_Management
             {
                 Application.Exit();
             }
+        }
+
+        private void tsiProfile_Click(object sender, EventArgs e)
+        {
+            frmProfile f = new frmProfile();
+            f.ShowDialog();
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChangePass f = new frmChangePass();
+            f.ShowDialog();
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Exit(this, new EventArgs());
         }
     }
 }

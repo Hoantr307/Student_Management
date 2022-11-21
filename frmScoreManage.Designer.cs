@@ -30,16 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cboConduct = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtScoreFinal = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cboSubject = new System.Windows.Forms.ComboBox();
             this.txtScoreElement = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cboClasses = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboConduct = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtScorePractice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtScoreFinal = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtStudentName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtScorePractice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtScoreAvg = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -50,16 +52,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvScores = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbAdd = new System.Windows.Forms.ToolStripButton();
@@ -74,8 +66,16 @@
             this.btnDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cboClasses = new System.Windows.Forms.ComboBox();
-            this.cboSubject = new System.Windows.Forms.ComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScores)).BeginInit();
@@ -118,6 +118,59 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Điểm Sinh Viên";
             // 
+            // cboSubject
+            // 
+            this.cboSubject.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSubject.FormattingEnabled = true;
+            this.cboSubject.Location = new System.Drawing.Point(175, 187);
+            this.cboSubject.Name = "cboSubject";
+            this.cboSubject.Size = new System.Drawing.Size(236, 36);
+            this.cboSubject.TabIndex = 6;
+            this.cboSubject.SelectedIndexChanged += new System.EventHandler(this.cboClasses_SelectedIndexChanged);
+            this.cboSubject.SelectionChangeCommitted += new System.EventHandler(this.cboClasses_SelectionChangeCommitted);
+            // 
+            // txtScoreElement
+            // 
+            this.txtScoreElement.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtScoreElement.DefaultText = "";
+            this.txtScoreElement.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtScoreElement.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtScoreElement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtScoreElement.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtScoreElement.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtScoreElement.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtScoreElement.ForeColor = System.Drawing.Color.Black;
+            this.txtScoreElement.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtScoreElement.Location = new System.Drawing.Point(678, 35);
+            this.txtScoreElement.Name = "txtScoreElement";
+            this.txtScoreElement.PasswordChar = '\0';
+            this.txtScoreElement.PlaceholderText = "";
+            this.txtScoreElement.SelectedText = "";
+            this.txtScoreElement.Size = new System.Drawing.Size(237, 41);
+            this.txtScoreElement.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtScoreElement.TabIndex = 4;
+            // 
+            // cboClasses
+            // 
+            this.cboClasses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboClasses.FormattingEnabled = true;
+            this.cboClasses.Location = new System.Drawing.Point(176, 138);
+            this.cboClasses.Name = "cboClasses";
+            this.cboClasses.Size = new System.Drawing.Size(236, 36);
+            this.cboClasses.TabIndex = 6;
+            this.cboClasses.SelectedIndexChanged += new System.EventHandler(this.cboClasses_SelectedIndexChanged);
+            this.cboClasses.SelectionChangeCommitted += new System.EventHandler(this.cboClasses_SelectionChangeCommitted);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(524, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Điểm Thành Phần:";
+            // 
             // cboConduct
             // 
             this.cboConduct.BackColor = System.Drawing.Color.Transparent;
@@ -141,6 +194,37 @@
             this.cboConduct.Size = new System.Drawing.Size(237, 36);
             this.cboConduct.TabIndex = 5;
             // 
+            // txtScorePractice
+            // 
+            this.txtScorePractice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtScorePractice.DefaultText = "";
+            this.txtScorePractice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtScorePractice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtScorePractice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtScorePractice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtScorePractice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtScorePractice.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtScorePractice.ForeColor = System.Drawing.Color.Black;
+            this.txtScorePractice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtScorePractice.Location = new System.Drawing.Point(678, 88);
+            this.txtScorePractice.Name = "txtScorePractice";
+            this.txtScorePractice.PasswordChar = '\0';
+            this.txtScorePractice.PlaceholderText = "";
+            this.txtScorePractice.SelectedText = "";
+            this.txtScorePractice.Size = new System.Drawing.Size(237, 41);
+            this.txtScorePractice.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtScorePractice.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(526, 91);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(140, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Điểm Thực Hành:";
+            // 
             // txtScoreFinal
             // 
             this.txtScoreFinal.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -162,27 +246,6 @@
             this.txtScoreFinal.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtScoreFinal.TabIndex = 4;
             this.txtScoreFinal.Enter += new System.EventHandler(this.txtScoreFinal_Enter);
-            // 
-            // txtScoreElement
-            // 
-            this.txtScoreElement.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtScoreElement.DefaultText = "";
-            this.txtScoreElement.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtScoreElement.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtScoreElement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtScoreElement.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtScoreElement.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtScoreElement.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScoreElement.ForeColor = System.Drawing.Color.Black;
-            this.txtScoreElement.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtScoreElement.Location = new System.Drawing.Point(678, 35);
-            this.txtScoreElement.Name = "txtScoreElement";
-            this.txtScoreElement.PasswordChar = '\0';
-            this.txtScoreElement.PlaceholderText = "";
-            this.txtScoreElement.SelectedText = "";
-            this.txtScoreElement.Size = new System.Drawing.Size(237, 41);
-            this.txtScoreElement.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtScoreElement.TabIndex = 4;
             // 
             // txtStudentName
             // 
@@ -225,16 +288,6 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "Điểm Tổng:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(526, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 20);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Điểm Thực Hành:";
-            // 
             // txtDescription
             // 
             this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -255,37 +308,6 @@
             this.txtDescription.Size = new System.Drawing.Size(237, 41);
             this.txtDescription.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtDescription.TabIndex = 4;
-            // 
-            // txtScorePractice
-            // 
-            this.txtScorePractice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtScorePractice.DefaultText = "";
-            this.txtScorePractice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtScorePractice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtScorePractice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtScorePractice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtScorePractice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtScorePractice.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScorePractice.ForeColor = System.Drawing.Color.Black;
-            this.txtScorePractice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtScorePractice.Location = new System.Drawing.Point(678, 88);
-            this.txtScorePractice.Name = "txtScorePractice";
-            this.txtScorePractice.PasswordChar = '\0';
-            this.txtScorePractice.PlaceholderText = "";
-            this.txtScorePractice.SelectedText = "";
-            this.txtScorePractice.Size = new System.Drawing.Size(237, 41);
-            this.txtScorePractice.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtScorePractice.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(524, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Điểm Thành Phần:";
             // 
             // txtScoreAvg
             // 
@@ -428,86 +450,6 @@
             this.dgvScores.TabIndex = 0;
             this.dgvScores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvScores_CellClick);
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "StudentID";
-            this.Column1.HeaderText = "Mã Sinh Viên";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "StudentName";
-            this.Column2.HeaderText = "Họ Tên";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "ClassID";
-            this.Column3.HeaderText = "Lớp";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "SubjectID";
-            this.Column4.HeaderText = "Môn Học";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "ScoreAvg";
-            this.Column5.HeaderText = "Điểm Trung Bình";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "ScoreElement";
-            this.Column10.HeaderText = "Điểm Thành Phần";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "ScorePractice";
-            this.Column6.HeaderText = "Điểm Thực Hành";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "ScoreFinal";
-            this.Column7.HeaderText = "Điểm Tổng Kết";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Conduct";
-            this.Column8.HeaderText = "Hạnh Kiểm";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 125;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "Description";
-            this.Column9.HeaderText = "Mô Tả";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 125;
-            // 
             // guna2Panel3
             // 
             this.guna2Panel3.Controls.Add(this.toolStrip1);
@@ -635,7 +577,7 @@
             // 
             this.btnDelete.AutoSize = false;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Image = global::Student_Management.Properties.Resources._4763274_instructor_professor_teacher_teaching_tutor_icon;
+            this.btnDelete.Image = global::Student_Management.Properties.Resources._3209358_delete_edit_minus_remove_subtract_icon;
             this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(240, 40);
@@ -668,27 +610,85 @@
             this.rToolStripMenuItem.Text = "Refresh";
             this.rToolStripMenuItem.Click += new System.EventHandler(this.rToolStripMenuItem_Click);
             // 
-            // cboClasses
+            // Column1
             // 
-            this.cboClasses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboClasses.FormattingEnabled = true;
-            this.cboClasses.Location = new System.Drawing.Point(176, 138);
-            this.cboClasses.Name = "cboClasses";
-            this.cboClasses.Size = new System.Drawing.Size(236, 36);
-            this.cboClasses.TabIndex = 6;
-            this.cboClasses.SelectedIndexChanged += new System.EventHandler(this.cboClasses_SelectedIndexChanged);
-            this.cboClasses.SelectionChangeCommitted += new System.EventHandler(this.cboClasses_SelectionChangeCommitted);
+            this.Column1.DataPropertyName = "StudentID";
+            this.Column1.HeaderText = "Mã Sinh Viên";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
-            // cboSubject
+            // Column2
             // 
-            this.cboSubject.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboSubject.FormattingEnabled = true;
-            this.cboSubject.Location = new System.Drawing.Point(175, 187);
-            this.cboSubject.Name = "cboSubject";
-            this.cboSubject.Size = new System.Drawing.Size(236, 36);
-            this.cboSubject.TabIndex = 6;
-            this.cboSubject.SelectedIndexChanged += new System.EventHandler(this.cboClasses_SelectedIndexChanged);
-            this.cboSubject.SelectionChangeCommitted += new System.EventHandler(this.cboClasses_SelectionChangeCommitted);
+            this.Column2.DataPropertyName = "StudentName";
+            this.Column2.HeaderText = "Họ Tên";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "ClassID";
+            this.Column3.HeaderText = "Lớp";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "SubjectID";
+            this.Column4.HeaderText = "Môn Học";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "ScoreAvg";
+            this.Column5.HeaderText = "Điểm Trung Bình";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "ScoreElement";
+            this.Column10.HeaderText = "Điểm Thành Phần";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "ScorePractice";
+            this.Column6.HeaderText = "Điểm Thực Hành";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "ScoreFinal";
+            this.Column7.HeaderText = "Điểm Kết Thúc HP";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Conduct";
+            this.Column8.HeaderText = "Hạnh Kiểm";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 125;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "Description";
+            this.Column9.HeaderText = "Mô Tả";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 125;
             // 
             // frmScoreManage
             // 
@@ -746,6 +746,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ToolStripButton tsbImport;
         private System.Windows.Forms.ToolStripTextBox txtFilePath;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem rToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cboClasses;
+        private System.Windows.Forms.ComboBox cboSubject;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -756,9 +760,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem rToolStripMenuItem;
-        private System.Windows.Forms.ComboBox cboClasses;
-        private System.Windows.Forms.ComboBox cboSubject;
     }
 }

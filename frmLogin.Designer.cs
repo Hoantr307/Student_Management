@@ -82,6 +82,7 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(397, 576);
             this.guna2Panel1.TabIndex = 0;
+            this.guna2Panel1.UseTransparentBackground = true;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // cboPosition
@@ -109,7 +110,8 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.linkLabel1.ForeColor = System.Drawing.Color.White;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Location = new System.Drawing.Point(32, 526);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(134, 20);
@@ -161,7 +163,7 @@
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(291, 526);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
@@ -174,7 +176,7 @@
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(88, 287);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
@@ -197,6 +199,7 @@
             this.tswRemember.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.tswRemember.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.tswRemember.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.tswRemember.UseTransparentBackground = true;
             // 
             // txtPassword
             // 
@@ -398,7 +401,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.BackColor = System.Drawing.Color.Teal;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1000, 601);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);

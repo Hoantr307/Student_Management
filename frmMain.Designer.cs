@@ -447,8 +447,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::Student_Management.Properties.Resources._186503191_1500534483621622_8159597822051476278_n;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImage = global::Student_Management.Properties.Resources.z3898255251609_c0ef5e710a053b06b6c51e73d77a6ebf;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1500, 1000);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);

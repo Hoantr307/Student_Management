@@ -193,6 +193,12 @@ namespace Student_Management
         private void rToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmStudent_Load(sender, e);
+            txtStudentID.Text = "";
+            txtStudentName.Text = "";
+            txtBirth.Text = "";
+            cboGender.Text = "";
+            txtAddress.Text = "";
+            cboClassID.Text = "";
         }
     }
 }

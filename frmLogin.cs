@@ -19,10 +19,10 @@ namespace Student_Management
         public frmLogin()
         {
             InitializeComponent();
-            Process proc = new Process();
+            /*Process proc = new Process();
             proc.StartInfo.FileName = Application.StartupPath + @"\data\Create database.bat";
             proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            proc.Start();
+            proc.Start();*/
 
 
         }

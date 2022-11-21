@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="guna2ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>595, 27</value>
+  </metadata>
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -142,18 +145,15 @@
   <data name="tsbPrint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEdSURBVEhLYxgFRAFfX99IS0vLP0D6PykYpMfPzy8Cagxu
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEeSURBVEhLYxgFRAFfX99ICwuLP0D6PykYpMfPzy8Cagxu
         AFTcgK6ZBNwANQY3AClC00QKJmxBWlraGiwaicINDQ3/N2/ejI7/ADEk6B49eqSybt26u1OmTPlPDl6/
         fv3/U6dOYeDLly/vApnN8PTp0zvPnj37TyN8iwGLIFUxxRbceXT9/7Gb28Ds27dv/z9y5AiKPMUWgAyf
-        dbwIzAYZPnnyZBT5wR9EhPAwsQCYKf6BMsehQ4dIwiA9wHyE1WAYBltw9erVizNnzvxPDr5y5coldEOR
-        MciC26dPnz6ATTMxGKQX3VAkfAtcFm3dunUONs3E4B07diwCGtSBBde8fPlSGVzgTZ8+PbKtre0PNgPw
-        YagewhXOKMANGBgAZiXnzkHo77gAAAAASUVORK5CYII=
+        dbwIzAYZPnnyZBT5wR9EhPAwseDSpUv/QJnj0KFDJGGQHmA+wmowDIMtuHr16sWZM2f+JwdfuXLlErqh
+        yBhkwe3Tp08fwKaZGAzSi24oEr4FLou2bt06B5tmYvCOHTsWAQ3qwIJrXr58qQwu8KZPnx7Z2tr6B5sB
+        +DBUD+EKZxTgBgwMACX5579F1dM6AAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="contextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>351, 26</value>
-  </metadata>
-  <metadata name="guna2ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>595, 27</value>
   </metadata>
 </root>

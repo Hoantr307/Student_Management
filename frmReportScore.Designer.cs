@@ -55,7 +55,6 @@
             this.crvScore.Size = new System.Drawing.Size(902, 500);
             this.crvScore.TabIndex = 0;
             this.crvScore.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
-            this.crvScore.Load += new System.EventHandler(this.crvClass_Load);
             // 
             // guna2Panel1
             // 
@@ -125,6 +124,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReportTeacher";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmReportScore_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
