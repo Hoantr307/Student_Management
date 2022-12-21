@@ -13,7 +13,7 @@ create table Account
 )
 go
 
-select * from subject
+select * from Account
 
 
 create table Student
